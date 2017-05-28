@@ -1,0 +1,6 @@
+[31m<p>[0m
+This input file
+is [31m<i>[0mbad[31m</i>[0m.  It
+ends in the middle
+of an [34m&entity 
+[0m

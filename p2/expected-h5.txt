@@ -1,0 +1,6 @@
+This [31m<html>[0minput file[31m</html>[0m is
+bad.  [31m<sandwich>[0mNot only[31m</sandwich>[0m does
+it have [34m&nonsense;[0m tags and [34m&entities;[0m
+It also ends right in the middle
+of a [31m<tag
+[0m

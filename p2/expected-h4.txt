@@ -1,0 +1,6 @@
+[31m<h1>[0mExample[31m</h1>[0m
+
+[31m<p>[0m
+  This example has tags like [31m<b>[0mthis[31m</b>[0m, [34m&amp;[0m it
+  has an entity or two: [34m&#9786;[0m
+[31m</p>[0m

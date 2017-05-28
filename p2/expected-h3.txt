@@ -1,0 +1,7 @@
+[31m<h1>[0mHello World[31m</h1>[0m
+
+[31m<p>[0m
+  This is a paragraph.
+  You can [31m<b>[0mnest[31m</b>[0m tags.
+  Our program isn't really smart enough to notice.
+[31m</p>[0m
