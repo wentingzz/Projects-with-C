@@ -12,6 +12,7 @@
 
 #define MAX_INTENSITY 255
 #define MAX_ROW 100
+#define INVALID_EXIT 100
 
 /** x value of first point */
 double x1;
@@ -92,7 +93,7 @@ int main()
   scanf(" %lf  %lf", &x3, &y3);
   if (x1 == 0 || x2 == 0 || x3 == 0 || y1 == 0 || y2 == 0 || y3 == 0) {
     printf("Invalid input\n");
-    return 100;
+    return INVALID_EXIT;
   }
   printf("P3\n");
   printf("%d %d\n", MAX_ROW, MAX_ROW);

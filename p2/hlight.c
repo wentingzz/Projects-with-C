@@ -9,6 +9,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define TAG_EXIT 101
+#define ENTITY_EXIT 100
+
 /** current character to process*/
 int ch;
 /** 1 if there is an end sign of tag */
@@ -77,9 +80,9 @@ int main()
     }
   }
   if (tagEnd == 0) {
-    return 101;
+    return TAG_EXIT;
   } else if (entityEnd == 0) {
-    return 100;
+    return ENTITY_EXIT;
   } else {
     return EXIT_SUCCESS;
   }
