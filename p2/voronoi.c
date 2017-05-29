@@ -10,6 +10,9 @@
 #include <stdbool.h>
 #include <math.h>
 
+#define MAX_INTENSITY 255
+#define MAX_ROW 100
+
 /** x value of first point */
 double x1;
 /** y value of first point */
@@ -22,10 +25,6 @@ double y2;
 double x3;
 /** y value of third point */
 double y3;
-/** number representing max intensity */
-int MAX_INTENSITY = 255;
-/** number representing max row/col */
-int MAX_ROW = 100;
 
 /**
   Return true if the given pixel is the closest one to the given point
@@ -91,8 +90,12 @@ int main()
   scanf(" %lf  %lf", &x1, &y1);
   scanf(" %lf  %lf", &x2, &y2);
   scanf(" %lf  %lf", &x3, &y3);
+  if (x1 == 0 || x2 == 0 || x3 == 0 || y1 == 0 || y2 == 0 || y3 == 0) {
+    printf("Invalid input\n");
+    return 100;
+  }
   printf("P3\n");
-  printf("%d %d\n", 100, 100);
+  printf("%d %d\n", MAX_ROW, MAX_ROW);
   printf("%d\n", MAX_INTENSITY);
   for (int i = 0; i < MAX_ROW; i++) { //row
     for (int j = 0; j < MAX_ROW; j++) { //col
