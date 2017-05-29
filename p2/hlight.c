@@ -11,6 +11,10 @@
 
 /** current character to process*/
 int ch;
+/** 1 if there is an end sign of tag */
+int tagEnd = 1;
+/** 1 if there is an end sign of entity */
+int entityEnd = 1;
 
 /**
   Notices if the tag reaches the end and handles error if the file ends before the > sign
@@ -21,11 +25,14 @@ void showTag()
   while ( (ch = getchar()) != '>' ) {
     if (ch == EOF) {
       printf("\e[0m");
-      exit(0);
+      tagEnd = 0;
+      break;
     }
     putchar(ch);
   }
-  printf(">\e[0m");
+  if (ch != EOF) {
+    printf(">\e[0m");
+  }
 }
 
 /**
@@ -37,11 +44,14 @@ void showEntity()
    while ( (ch = getchar()) != ';' ) {
     if (ch == EOF) {
       printf("\e[0m");
-      exit(0);
+      entityEnd = 0;
+      break;
     }
     putchar(ch);
   }
-  printf(";\e[0m");
+  if (ch != EOF) {
+    printf(";\e[0m");
+  }
 }
 
 /**
@@ -54,11 +64,23 @@ int main()
   while ( (ch = getchar() ) != EOF ) {
     if (ch == '<' ) { //starting the tag
       showTag();
+      if (tagEnd == 0) {
+        break;
+      }
     } else if ( ch == '&' ) { //starting the entity
       showEntity();
+      if (entityEnd == 0) {
+        break;
+      }
     } else {
       putchar( ch );
     }
   }
-  return EXIT_SUCCESS;
+  if (tagEnd == 0) {
+    return 101;
+  } else if (entityEnd == 0) {
+    return 100;
+  } else {
+    return EXIT_SUCCESS;
+  }
 }
