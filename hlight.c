@@ -26,6 +26,7 @@ void showTag()
     if (ch == EOF) {
       printf("\e[0m");
       tagEnd = 0;
+      break;
     }
     putchar(ch);
   }
@@ -42,6 +43,7 @@ void showEntity()
     if (ch == EOF) {
       printf("\e[0m");
       entityEnd = 0;
+      break;
     }
     putchar(ch);
   }
@@ -58,16 +60,17 @@ int main()
   while ( (ch = getchar() ) != EOF ) {
     if (ch == '<' ) { //starting the tag
       showTag();
+      if (tagEnd == 0) {
+        return 101;
+      }
     } else if ( ch == '&' ) { //starting the entity
       showEntity();
+      if (entityEnd == 0) {
+        return 100;
+      }
     } else {
       putchar( ch );
     }
-  }
-  if (tagEnd == 0) {
-    return 101;
-  } else if (entityEnd == 0) {
-    return 100;
   }
   return EXIT_SUCCESS;
 }
