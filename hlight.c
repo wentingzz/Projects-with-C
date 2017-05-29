@@ -62,11 +62,13 @@ int main()
       showTag();
       if (tagEnd == 0) {
         return 101;
+        break;
       }
     } else if ( ch == '&' ) { //starting the entity
       showEntity();
       if (entityEnd == 0) {
         return 100;
+        break;
       }
     } else {
       putchar( ch );
