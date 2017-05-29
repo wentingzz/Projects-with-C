@@ -17,24 +17,15 @@ int ch;
  */
 void showTag()
 {
-  putchar( '[' );
-  putchar( '3' );
-  putchar( '1' );
-  putchar( 'm' );
-  putchar( ch );
+  printf("\e[31m<");
   while ( (ch = getchar()) != '>' ) {
     if (ch == EOF) {
-      putchar( '[' );
-      putchar( '0' );
-      putchar( 'm' );
+      printf("\e[0m");
       exit(0);
     }
     putchar(ch);
   }
-  putchar( ch );
-  putchar( '[' );
-  putchar( '0' );
-  putchar( 'm' );
+  printf(">\e[0m");
 }
 
 /**
@@ -42,24 +33,15 @@ void showTag()
  */
 void showEntity()
 {
-  putchar( '[' );
-  putchar( '3' );
-  putchar( '4' );
-  putchar( 'm' );
-  putchar( ch );
+  printf("\e[34m&");
    while ( (ch = getchar()) != ';' ) {
     if (ch == EOF) {
-      putchar( '[' );
-      putchar( '0' );
-      putchar( 'm' );
+      printf("\e[0m");
       exit(0);
     }
     putchar(ch);
   }
-  putchar( ch );
-  putchar( '[' );
-  putchar( '0' );
-  putchar( 'm' );
+  printf(";\e[0m");
 }
 
 /**
