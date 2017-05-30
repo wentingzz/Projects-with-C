@@ -9,6 +9,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define TAG_EXIT 101
+#define ENTITY_EXIT 100
+
 /** current character to process*/
 int ch;
 /** 1 if there is an end sign of tag */
@@ -24,7 +27,6 @@ void showTag()
   printf("\e[31m<");
   while ( (ch = getchar()) != '>' ) {
     if (ch == EOF) {
-      printf("\e[0m");
       tagEnd = 0;
       break;
     }
@@ -41,7 +43,6 @@ void showEntity()
   printf("\e[34m&");
    while ( (ch = getchar()) != ';' ) {
     if (ch == EOF) {
-      printf("\e[0m");
       entityEnd = 0;
       break;
     }
@@ -61,18 +62,22 @@ int main()
     if (ch == '<' ) { //starting the tag
       showTag();
       if (tagEnd == 0) {
-        return 101;
         break;
       }
     } else if ( ch == '&' ) { //starting the entity
       showEntity();
       if (entityEnd == 0) {
-        return 100;
         break;
       }
     } else {
       putchar( ch );
     }
   }
-  return EXIT_SUCCESS;
+  if (tagEnd == 0) {
+    return TAG_EXIT;
+  } else if (entityEnd == 0) {
+    return ENTITY_EXIT;
+  } else {
+    return EXIT_SUCCESS;
+  }
 }

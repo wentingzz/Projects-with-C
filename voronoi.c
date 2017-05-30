@@ -12,6 +12,8 @@
 
 #define MAX_INTENSITY 255
 #define MAX_ROW 100
+#define INVALID_EXIT 100
+#define TOTAL_INPUTS 6
 
 /** x value of first point */
 double x1;
@@ -87,12 +89,10 @@ void chooseColor( int col, int row )
 */
 int main()
 {
-  scanf(" %lf  %lf", &x1, &y1);
-  scanf(" %lf  %lf", &x2, &y2);
-  scanf(" %lf  %lf", &x3, &y3);
-  if (x1 == null || x2 == null || x3 == null) {
-    printf("Invalid input");
-    return 100;
+  int numbers = scanf(" %lf  %lf\n %lf  %lf\n %lf  %lf", &x1, &y1, &x2, &y2, &x3, &y3);
+  if (numbers != TOTAL_INPUTS) {
+    printf("Invalid input\n");
+    return INVALID_EXIT;
   }
   printf("P3\n");
   printf("%d %d\n", MAX_ROW, MAX_ROW);
