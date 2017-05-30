@@ -88,10 +88,11 @@ void chooseColor( int col, int row )
 */
 int main()
 {
-  scanf(" %lf  %lf", &x1, &y1);
-  scanf(" %lf  %lf", &x2, &y2);
-  scanf(" %lf  %lf", &x3, &y3);
-  if (x1 == 0 || x2 == 0 || x3 == 0 || y1 == 0 || y2 == 0 || y3 == 0) {
+  // scanf(" %lf  %lf", &x1, &y1);
+//   scanf(" %lf  %lf", &x2, &y2);
+//   scanf(" %lf  %lf", &x3, &y3);
+  int numbers = scanf(" %lf  %lf\n %lf  %lf\n %lf  %lf", &x1, &y1, &x2, &y2, &x3, &y3);
+  if (numbers != 6) {
     printf("Invalid input\n");
     return INVALID_EXIT;
   }
