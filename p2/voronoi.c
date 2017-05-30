@@ -90,8 +90,7 @@ void chooseColor( int col, int row )
 int main()
 {
   int numbers = scanf(" %lf  %lf\n %lf  %lf\n %lf  %lf", &x1, &y1, &x2, &y2, &x3, &y3);
-  if (numbers != TOTAL_INPUTS || x1 > MAX_ROW || y1 > MAX_ROW || x2 > MAX_ROW 
-  || y2 > MAX_ROW || x3 > MAX_ROW || y3 > MAX_ROW) {
+  if (numbers != TOTAL_INPUTS) {
     printf("Invalid input\n");
     return INVALID_EXIT;
   }
