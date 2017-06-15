@@ -28,7 +28,7 @@ int main(int argc, char * argv[])
   int col;
   int wordCount;
   scanf("%d %d\n%d", &row, &col, &wordCount);
-//   prinf("%d\n%d\n%d\n", row, col, word); test
+  prinf("%d\n%d\n%d\n", row, col, word); test
   
   char choice;
   char words[(row > col ? (row + 1):(col + 1))];

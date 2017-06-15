@@ -54,7 +54,7 @@ bool getLetters( char * letters )
   while ((next = letters[count++]) != '\0'){
     if (count == MAX_LENGTH){
       return false;
-    } else if ( !(next >= 'A' && next <= 'Z') && !(next >= 'a' && next <= 'z') ){ //not letter
+    } else if ( !(next >= 'a' && next <= 'z') ){ //not letter
       return false;
     }
   }
@@ -71,7 +71,7 @@ int arraylength(char const * word)
 {
   int result = 0;
   while (word[result] != '\0'){
-    if ( (word[result] >= 'A' && word[result] <= 'Z') || (word[result] >= 'a' && word[result] <= 'z')){
+    if ((word[result] >= 'a' && word[result] <= 'z')){
       result++;
     }
   }
@@ -135,14 +135,15 @@ bool matches( char const * word, char const * letters )
 */
 int main( int argc, char *argv[] )
 {
-  FIle * input = fopen(argv[1], "r");
-  fseek(file, 0, SEEK_END);
-  if(ftell(input) == 0){
-    return 1;
-  }
+  // FILE * input = fopen(argv[1], "r");
+//   fseek(input, 0, SEEK_END);
+//   if(ftell(input) == 0){
+//     return 1;
+//   }
   readWords(argv[1]);
   char lett[MAX_LENGTH];
   
+  int status = 0;
   do{
     printf("letters> ");
     if (scanf("%s", lett) != 1){
@@ -150,12 +151,19 @@ int main( int argc, char *argv[] )
     }
     if (!getLetters(&lett[0])){
       printf("Invalid letters");
+      status = 1;
     }
     for (int i = 0; i < wordCount; i++){
-    if (matches(&words[i][0], &lett[0])){
-      printf("%s\n", words[i]);
+      if (matches(&words[i][0], &lett[0])){
+        printf("%s\n", words[i]);
+        status = 0;
+      }
     }
-  }
   } while (true);
-  return 0;
+  // 
+//   if (!getLetters(&lett[0])){
+//     printf("Invalid letters");
+//     return 1;
+//   }
+  return status;
 }

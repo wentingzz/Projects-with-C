@@ -14,4 +14,7 @@ main: puzzle.o grid.o
 puzzle.o: grid.h
 grid.o: grid.h
 
-#clean!!!!!
+clean:
+	puzzle.o
+	grid.o
+	Makefile

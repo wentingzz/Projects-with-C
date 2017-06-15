@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include "grid.h"
+// #include "grid.h"
 
 /**
   adds a word to the grid with the first letter at row rpos and column cpos with a horizontal orientation
@@ -20,7 +20,13 @@
 */
 void writeHorizontal( int rpos, int cpos, char word[], int rows, int cols, char grid[ rows ][ cols ] )
 {
-
+  int count = 0;
+  for(int i = cpos; i < cols; i++){
+    if(word[count] == '\0'){
+      break;
+    }
+    grid[rpos][i] = word[count++];
+  }
 }
 
 /**
@@ -35,7 +41,13 @@ void writeHorizontal( int rpos, int cpos, char word[], int rows, int cols, char 
 */
 void writeVertical( int rpos, int cpos, char word[], int rows, int cols, char grid[ rows ][ cols ] )
 {
-
+  int count = 0;
+  for(int i = rpos; i < rows; i++){
+    if(word[count] == '\0'){
+      break;
+    }
+    grid[i][cpos] = word[count++];
+  }
 }
 
 /**
@@ -47,5 +59,16 @@ void writeVertical( int rpos, int cpos, char word[], int rows, int cols, char gr
 */
 void printGrid( int rows, int cols, char board[ rows ][ cols ] )
 {
-
+  for(int i = 0; i < rows; i++){
+    for(int j = 0; j < cols - 1; j++){
+      if(board[i][j] < 'A' || board[i][j] > 'Z'){
+        board[i][j] = ' ';
+      }
+      printf("%c ", board[i][j]);
+    }
+    if(board[i][cols - 1] < 'A' || board[i][cols - 1] > 'Z'){
+        board[i][cols - 1] = ' ';
+      }
+    printf("%c\n", board[i][cols - 1]);
+  }
 }
