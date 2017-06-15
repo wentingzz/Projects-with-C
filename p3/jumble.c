@@ -15,7 +15,7 @@ char words[100000][21];
 int wordCount;
 
 /**
-  read the word list from the file with the given name, 
+  read the word list from the file with the given name,
   storing it in the global words array and setting wordCount
   
   @param filename name of the file storing the word list
@@ -25,8 +25,8 @@ void readWords( char const *filename )
   FILE * input = fopen(filename, "r");
   int count = 0;
   char ch;
-  while(fscanf(input, "%c", &ch) == 1){
-    if(ch == '\n'){
+  while (fscanf(input, "%c", &ch) == 1) {
+    if (ch == '\n') {
       wordCount++;
       words[wordCount][count] = '\0'; // make it string
       count = 0;
@@ -47,9 +47,9 @@ bool getLetters( char * letters )
   int count = 0;
   char next;
   while ((next = letters[count++]) != '\0'){
-    if(count == 20){
+    if (count == 20){
       return false;
-    } else if( !(next >= 'A' && next <= 'Z') && !(next >= 'a' && next <= 'z') ){ //not letter
+    } else if ( !(next >= 'A' && next <= 'Z') && !(next >= 'a' && next <= 'z') ){ //not letter
       return false;
     }
   }
@@ -65,8 +65,8 @@ bool getLetters( char * letters )
 int arraylength(char const * word)
 {
   int result = 0;
-  while(word[result] != '\0'){
-    if( (word[result] >= 'A' && word[result] <= 'Z') || (word[result] >= 'a' && word[result] <= 'z')){
+  while (word[result] != '\0'){
+    if ( (word[result] >= 'A' && word[result] <= 'Z') || (word[result] >= 'a' && word[result] <= 'z')){
       result++;
     }
   }
@@ -85,19 +85,19 @@ bool contains(char const * list1, char const * list2)
   int idx = 0;
   int idx2 = 0;
   bool result;
-  while( list1[idx] != '\0'){ // take one char in list 1
+  while ( list1[idx] != '\0'){ // take one char in list 1
     result = false;
-    while( list2[idx2] != '\0'){ // try to find the same char in list 2
-      if(list1[idx] == list2[idx2]){ // find, break the while loop
+    while ( list2[idx2] != '\0'){ // try to find the same char in list 2
+      if (list1[idx] == list2[idx2]){ // find, break the while loop
         result = true;
         break;
       }
       idx2++;
     }
-    if(!result){ //this char doesn't exist in another list
+    if (!result){ //this char doesn't exist in another list
       return false;
     }
-    idx++; 
+    idx++;
     idx2 = 0; //ready for another circle to start
   }
   return result;
@@ -113,7 +113,7 @@ bool contains(char const * list1, char const * list2)
 */
 bool matches( char const * word, char const * letters )
 {
-  if(arraylength(word) != arraylength(letters) || 
+  if (arraylength(word) != arraylength(letters) ||
       !contains(letters, word) ||
       !contains(word, letters)){
     return false;
@@ -135,21 +135,17 @@ int main( int argc, char *argv[] )
   
   do{
     printf("letters> ");
-    if(scanf("%s", lett) != 1){
+    if (scanf("%s", lett) != 1){
       break;
     }
-    if(!getLetters(&lett[0])){
+    if (!getLetters(&lett[0])){
       printf("Invalid letters");
     }
-    for(int i = 0; i < wordCount; i++){
-    if(matches(&words[i][0], &lett[0])){
+    for (int i = 0; i < wordCount; i++){
+    if (matches(&words[i][0], &lett[0])){
       printf("%s\n", words[i]);
     }
   }
-  } while(true);
-  
-  
-  
-  
+  } while (true);
   return 0;
 }
