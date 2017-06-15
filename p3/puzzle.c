@@ -19,11 +19,11 @@ int main(int argc, char * argv[])
 //     printf("usage: puzzle <input-file>\n");
 //     return 1;
 //   }
-  FILE * input = fopen(argv[1], "r");
-  if(!input) {
-    printf("usage: puzzle <input-file>\n");
-    return 1;
-  }
+//   FILE * input = fopen(argv[1], "r");
+//   if(!input) {
+//     printf("usage: puzzle <input-file>\n");
+//     return 1;
+//   }
   int row;
   int col;
   int wordCount;
