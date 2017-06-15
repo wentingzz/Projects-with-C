@@ -28,11 +28,6 @@ void readWords( char const *filename )
   FILE * input = fopen(filename, "r");
   int count = 0;
   char ch;
-  
-  if(ftell(input) == 0){
-    return 1;
-  }
-  
   while (fscanf(input, "%c", &ch) == 1) {
     if (ch == '\n') {
       wordCount++;
@@ -42,6 +37,7 @@ void readWords( char const *filename )
       words[wordCount][count++] = ch;
     }
   }
+  
   fclose(input);
 }
 
@@ -139,6 +135,11 @@ bool matches( char const * word, char const * letters )
 */
 int main( int argc, char *argv[] )
 {
+  FIle * input = fopen(argv[1], "r");
+  fseek(file, 0, SEEK_END);
+  if(ftell(input) == 0){
+    return 1;
+  }
   readWords(argv[1]);
   char lett[MAX_LENGTH];
   
