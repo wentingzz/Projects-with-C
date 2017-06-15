@@ -11,10 +11,10 @@ main: puzzle.o grid.o
 # and this one header.
 # BTW, there are tools that will auto-generate these dependencies
 # for you, by looking at your source code.
+
 puzzle.o: grid.h
 grid.o: grid.h
 
 clean:
-	puzzle.o
 	grid.o
 	Makefile
