@@ -1,0 +1,4 @@
+letters> looped
+poodle
+pooled
+letters> 

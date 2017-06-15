@@ -1,0 +1,3 @@
+ALLCAPS
+lowercase
+MiXeDCASE
