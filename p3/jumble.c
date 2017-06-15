@@ -28,6 +28,11 @@ void readWords( char const *filename )
   FILE * input = fopen(filename, "r");
   int count = 0;
   char ch;
+  
+  if(ftell(input) == 0){
+    return 1;
+  }
+  
   while (fscanf(input, "%c", &ch) == 1) {
     if (ch == '\n') {
       wordCount++;
@@ -37,6 +42,7 @@ void readWords( char const *filename )
       words[wordCount][count++] = ch;
     }
   }
+  fclose(input);
 }
 
 /**
