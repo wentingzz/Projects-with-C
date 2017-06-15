@@ -8,8 +8,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define MAX_WORDS 100000
+#define MAX_LENGTH 21
+
 /* list storing the words*/
-char words[100000][21];
+char words[MAX_WORDS][MAX_LENGTH];
 
 /* the number of words on the word list*/
 int wordCount;
@@ -47,7 +50,7 @@ bool getLetters( char * letters )
   int count = 0;
   char next;
   while ((next = letters[count++]) != '\0'){
-    if (count == 20){
+    if (count == MAX_LENGTH){
       return false;
     } else if ( !(next >= 'A' && next <= 'Z') && !(next >= 'a' && next <= 'z') ){ //not letter
       return false;
@@ -131,7 +134,7 @@ bool matches( char const * word, char const * letters )
 int main( int argc, char *argv[] )
 {
   readWords(argv[1]);
-  char lett[21];
+  char lett[MAX_LENGTH];
   
   do{
     printf("letters> ");
