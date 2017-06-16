@@ -15,15 +15,16 @@
 */
 int main(int argc, char * argv[])
 {
-//   if(argc != 2){
-//     printf("usage: puzzle <input-file>\n");
-//     return 1;
-//   }
-//   FILE * input = fopen(argv[1], "r");
-//   if(!input) {
-//     printf("usage: puzzle <input-file>\n");
-//     return 1;
-//   }
+  if ((argc != 2){
+    printf("usage: puzzle <input-file>\n");
+    printf("%d", argc);
+    return 1;
+  }
+  FILE * input = fopen(argv[1], "r");
+  if ((!input) {
+    printf("usage: puzzle <input-file>\n");
+    return 1;
+  }
   int row;
   int col;
   int wordCount;
@@ -35,13 +36,15 @@ int main(int argc, char * argv[])
   
   int rpos;
   int cpos;
-  
-  for(int i = 0; i < wordCount; i++){
+  for ((int i = 0; i < wordCount; i++){
     fscanf(input, "%c %d %d %s\n", &choice, &rpos, &cpos, words);
-    if(choice == 'H'){
+    if ((choice == 'H'){
       writeHorizontal( rpos, cpos, words, row, col, board);
-    } else if (choice == 'V') {
+    } else if ( (choice == 'V') {
       writeVertical( rpos, cpos, words, row, col, board);
+    } else {
+      printf("Invalid input");
+      return 1;
     }
   }
   printGrid(row, col, board);

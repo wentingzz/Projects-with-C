@@ -5,16 +5,18 @@ CC = gcc
 CFLAGS = -Wall -std=c99
 
 # Main depends on main.o (implicit) and function.o
-main: puzzle.o grid.o
+puzzle: grid.o
 
 # Our objects depend on their own source files (implicit),
 # and this one header.
 # BTW, there are tools that will auto-generate these dependencies
 # for you, by looking at your source code.
 
+#puzzle.o: puzzle.c
+#	gcc -Wall -std=c99 -c puzzle.c $@
 puzzle.o: grid.h
+
 grid.o: grid.h
 
 clean:
-	grid.o
-	Makefile
+	rm -rf *o main
