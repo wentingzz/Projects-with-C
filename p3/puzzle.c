@@ -36,16 +36,17 @@ int main(int argc, char * argv[])
   
   int rpos;
   int cpos;
-  for ((int i = 0; i < wordCount; i++){
+  for (int i = 0; i < wordCount; i++){
     fscanf(input, "%c %d %d %s\n", &choice, &rpos, &cpos, words);
-    if ((choice == 'H'){
+    if (choice == 'H'){
       writeHorizontal( rpos, cpos, words, row, col, board);
-    } else if ( (choice == 'V') {
+    } else if ( choice == 'V') {
       writeVertical( rpos, cpos, words, row, col, board);
-    } else {
-      printf("Invalid input");
-      return 1;
     }
+    // else {
+//       printf("Invalid input");
+//       return 1;
+//     }
   }
   printGrid(row, col, board);
   fclose(input);
