@@ -26,6 +26,10 @@ int wordCount;
 void readWords( char const *filename )
 {
   FILE * input = fopen(filename, "r");
+//   if(!input){
+//     printf("Can't open word file");
+//     return 1;
+//   }
   int count = 0;
   char ch;
   while (fscanf(input, "%c", &ch) == 1) {
@@ -49,16 +53,24 @@ void readWords( char const *filename )
 */
 bool getLetters( char * letters )
 {
-  int count = 0;
-  char next;
-  while ((next = letters[count++]) != '\0'){
-    if (count == MAX_LENGTH){
-      return false;
-    } else if ( !(next >= 'a' && next <= 'z') ){ //not letter
-      return false;
+  int count;
+  int status = 0;
+  printf("letters> ");
+  while(scanf("%s", letters) == 1){
+    while(letters[count] != '\0'){
+      if(letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
+        status = -1;
+      }
+      count++;
     }
+    if(status != -1){
+      return true;
+    }
+    count = 0;
+    status = 0;
+    printf("Invalid letters\nletters> ");
   }
-  return true;
+  return false;
 }
 
 /**
@@ -140,30 +152,23 @@ int main( int argc, char *argv[] )
 //   if(ftell(input) == 0){
 //     return 1;
 //   }
+  if(argc != 2){
+    printf("usage: jumble <word-file>");
+    return 1;
+  }
+  
   readWords(argv[1]);
   char lett[MAX_LENGTH];
-  
   int status = 0;
-  do{
-    printf("letters> ");
-    if (scanf("%s", lett) != 1){
-      break;
-    }
-    if (!getLetters(&lett[0])){
-      printf("Invalid letters");
-      status = 1;
-    }
+  
+  
+  while(getLetters(&lett[0])){
     for (int i = 0; i < wordCount; i++){
       if (matches(&words[i][0], &lett[0])){
         printf("%s\n", words[i]);
         status = 0;
       }
     }
-  } while (true);
-  // 
-//   if (!getLetters(&lett[0])){
-//     printf("Invalid letters");
-//     return 1;
-//   }
+  }
   return status;
 }
