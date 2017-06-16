@@ -7,9 +7,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
 
 #define MAX_WORDS 100000
 #define MAX_LENGTH 21
+#define ALPHABET 26
 
 /* list storing the words*/
 char words[MAX_WORDS][MAX_LENGTH];
@@ -28,19 +30,16 @@ void readWords( char const *filename )
   FILE * input = fopen(filename, "r");
   int count = 0;
   char ch;
-  while (fscanf(input, "%c", &ch) == 1 && wordCount <= MAX_WORDS) {
-    if(ch < 'a' || ch > 'z'){
-      wordCount = MAX_WORDS + 1;
-    }
-    if (ch == '\n') {
-      wordCount++;
-      words[wordCount][count] = '\0'; // make it string
+  while (fscanf(input, "%c", &ch) == 1 && wordCount < MAX_WORDS) {
+    if(ch >= 'a' && ch <= 'z'){ //valid letters
+      words[wordCount][count++] = ch;
+    } else if (ch == '\n') { //another word
+      words[wordCount++][count] = '\0'; // make it string
       count = 0;
     } else {
-      words[wordCount][count++] = ch;
+      wordCount = MAX_WORDS;
     }
   }
-  
   fclose(input);
 }
 
@@ -90,36 +89,6 @@ int arraylength(char const * word)
 }
 
 /**
-  Returns true if every character in list1 exists in list2
-  
-  @param list1 pointer to a list of characters
-  @param list2 pointer to a list of characters
-  @return true if characters in list1 are contained in list2
-*/
-bool contains(char const * list1, char const * list2)
-{
-  int idx = 0;
-  int idx2 = 0;
-  bool result;
-  while ( list1[idx] != '\0'){ // take one char in list 1
-    result = false;
-    while ( list2[idx2] != '\0'){ // try to find the same char in list 2
-      if (list1[idx] == list2[idx2]){ // find, break the while loop
-        result = true;
-        break;
-      }
-      idx2++;
-    }
-    if (!result){ //this char doesn't exist in another list
-      return false;
-    }
-    idx++;
-    idx2 = 0; //ready for another circle to start
-  }
-  return result;
-}
-
-/**
   Given a word and letters, this function returns true if the given word matches
   (contains exactly) the given letters
   
@@ -129,10 +98,20 @@ bool contains(char const * list1, char const * list2)
 */
 bool matches( char const * word, char const * letters )
 {
-  if (arraylength(word) != arraylength(letters) ||
-      !contains(letters, word) ||
-      !contains(word, letters)){
+  if(strlen( word ) != strlen(letters)){
     return false;
+  } else {
+    int count1[ALPHABET] = {0};
+    int count2[ALPHABET] = {0};
+    for(int i = 0; i < strlen(word); i++){
+      count1[(*(word + i)) - 'a']++;
+      count2[(*(letters + i)) - 'a']++;
+    }
+    for(int i = 0; i < ALPHABET; i++){
+      if((*(count1 + i)) != (*(count2 + i))){
+        return false;
+      }
+    }
   }
   return true;
 }
@@ -160,7 +139,7 @@ int main( int argc, char *argv[] )
   fclose(input);
   
   readWords(argv[1]);
-  if(wordCount > MAX_WORDS){
+  if(wordCount >= MAX_WORDS){
     fprintf(stderr, "Invalid word file\n");
     return 1;
   }
@@ -169,7 +148,7 @@ int main( int argc, char *argv[] )
   int status = 0;
   
   while(getLetters(&lett[0])){
-    for (int i = 0; i < wordCount; i++){
+    for (int i = 0; i <= wordCount; i++){
       if (matches(&words[i][0], &lett[0])){
         printf("%s\n", words[i]);
         status = 0;
