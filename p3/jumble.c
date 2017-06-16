@@ -31,7 +31,7 @@ void readWords( char const *filename )
   int count = 0;
   char ch;
   while (fscanf(input, "%c", &ch) == 1 && wordCount < MAX_WORDS) {
-    if(ch >= 'a' && ch <= 'z'){ //valid letters
+    if (ch >= 'a' && ch <= 'z'){ //valid letters
       words[wordCount][count++] = ch;
     } else if (ch == '\n') { //another word
       words[wordCount++][count] = '\0'; // make it string
@@ -54,14 +54,14 @@ bool getLetters( char * letters )
   int count;
   int status = 0;
   printf("letters> ");
-  while(scanf("%s", letters) == 1){
-    while(letters[count] != '\0'){
-      if(letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
+  while (scanf("%s", letters) == 1){
+    while (letters[count] != '\0'){
+      if (letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
         status = -1;
       }
       count++;
     }
-    if(status != -1){
+    if (status != -1){
       return true;
     }
     count = 0;
@@ -98,17 +98,17 @@ int arraylength(char const * word)
 */
 bool matches( char const * word, char const * letters )
 {
-  if(strlen( word ) != strlen(letters)){
+  if (strlen( word ) != strlen(letters)){
     return false;
   } else {
     int count1[ALPHABET] = {0};
     int count2[ALPHABET] = {0};
-    for(int i = 0; i < strlen(word); i++){
+    for (int i = 0; i < strlen(word); i++){
       count1[(*(word + i)) - 'a']++;
       count2[(*(letters + i)) - 'a']++;
     }
-    for(int i = 0; i < ALPHABET; i++){
-      if((*(count1 + i)) != (*(count2 + i))){
+    for (int i = 0; i < ALPHABET; i++){
+      if ((*(count1 + i)) != (*(count2 + i))){
         return false;
       }
     }
@@ -125,21 +125,22 @@ bool matches( char const * word, char const * letters )
 */
 int main( int argc, char *argv[] )
 {
-  if(argc != 2){
+  if (argc != 2){
     fprintf(stderr, "usage: jumble <word-file>\n");
     return 1;
   }
   
-  FILE * input = fopen(argv[1], "r"); 
-  if(!input){
+  FILE * input = fopen(argv[1], "r");
+  if (!input){
+    printf("path1");
     fprintf(stderr, "Can't open word file\n");
     fclose(input);
     return 1;
   }
   fclose(input);
-  
+  printf("path2");
   readWords(argv[1]);
-  if(wordCount >= MAX_WORDS){
+  if (wordCount >= MAX_WORDS){
     fprintf(stderr, "Invalid word file\n");
     return 1;
   }
@@ -147,7 +148,7 @@ int main( int argc, char *argv[] )
   char lett[MAX_LENGTH];
   int status = 0;
   
-  while(getLetters(&lett[0])){
+  while (getLetters(&lett[0])){
     for (int i = 0; i <= wordCount; i++){
       if (matches(&words[i][0], &lett[0])){
         printf("%s\n", words[i]);

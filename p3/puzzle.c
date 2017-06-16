@@ -33,6 +33,11 @@ int main(int argc, char * argv[])
   char choice;
   char words[(row > col ? (row):(col))];
   char board[row][col];
+  for (int i = 0; i < row; i++){
+    for (int j = 0; j < col; j++){
+      board[i][j] = '0';
+    }
+  }
   
   int rpos;
   int cpos;
@@ -43,10 +48,6 @@ int main(int argc, char * argv[])
     } else if ( choice == 'V') {
       writeVertical( rpos, cpos, words, row, col, board);
     }
-    // else {
-//       printf("Invalid input");
-//       return 1;
-//     }
   }
   printGrid(row, col, board);
   fclose(input);
