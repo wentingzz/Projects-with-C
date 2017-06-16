@@ -15,7 +15,7 @@
 char words[MAX_WORDS][MAX_LENGTH];
 
 /* the number of words on the word list*/
-int wordCount;
+int wordCount = 0;
 
 /**
   read the word list from the file with the given name,
@@ -26,13 +26,12 @@ int wordCount;
 void readWords( char const *filename )
 {
   FILE * input = fopen(filename, "r");
-//   if(!input){
-//     printf("Can't open word file");
-//     return 1;
-//   }
   int count = 0;
   char ch;
-  while (fscanf(input, "%c", &ch) == 1) {
+  while (fscanf(input, "%c", &ch) == 1 && wordCount <= MAX_WORDS) {
+    if(ch < 'a' || ch > 'z'){
+      wordCount = MAX_WORDS + 1;
+    }
     if (ch == '\n') {
       wordCount++;
       words[wordCount][count] = '\0'; // make it string
@@ -155,11 +154,17 @@ int main( int argc, char *argv[] )
   FILE * input = fopen(argv[1], "r"); 
   if(!input){
     fprintf(stderr, "Can't open word file\n");
+    fclose(input);
     return 1;
   }
   fclose(input);
   
   readWords(argv[1]);
+  if(wordCount > MAX_WORDS){
+    fprintf(stderr, "Invalid word file\n");
+    return 1;
+  }
+  
   char lett[MAX_LENGTH];
   int status = 0;
   
