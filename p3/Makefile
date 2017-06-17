@@ -17,5 +17,9 @@ puzzle: grid.o
 puzzle.o: grid.h
 grid.o: grid.h
 
-#clean:
-#	rm -rf *o puzzle
+clean:
+	rm puzzle
+	rm jumble
+	rm puzzle.o
+	rm jumble.o
+	rm grid.o
