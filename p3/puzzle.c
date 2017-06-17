@@ -37,8 +37,13 @@ int main(int argc, char * argv[])
   fscanf(input, "%d %d\n%d\n", &row, &col, &wordCount);
   
   char choice;
-  char words[(row > col ? (row):(col))];
+  char words[MAX_WORD];
   char board[row][col];
+  if (row > MAX_ROW || col > MAX_ROW){
+    fprintf(stderr, "Invalid input file\n");
+    fclose(input);
+    return 1;
+  }
   for (int i = 0; i < row; i++){
     for (int j = 0; j < col; j++){
       board[i][j] = '0';
@@ -48,7 +53,7 @@ int main(int argc, char * argv[])
   int rpos;
   int cpos;
   for (int i = 0; i < wordCount; i++){
-    if(fscanf(input, "%c %d %d %s\n", &choice, &rpos, &cpos, words) != READ_VARS){
+    if (fscanf(input, "%c %d %d %s\n", &choice, &rpos, &cpos, words) != READ_VARS){
       fprintf(stderr, "Invalid input file\n");
       fclose(input);
       return 1;
