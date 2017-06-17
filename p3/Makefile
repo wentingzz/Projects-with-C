@@ -5,6 +5,7 @@ CC = gcc
 CFLAGS = -Wall -std=c99
 
 # Main depends on main.o (implicit) and function.o
+jumble: jumble.o
 puzzle: grid.o
 
 # Our objects depend on their own source files (implicit),
