@@ -133,7 +133,6 @@ int main( int argc, char *argv[] )
   FILE * input = fopen(argv[1], "r");
   if (!input){
     fprintf(stderr, "Can't open word file\n");
-    fclose(input);
     return 1;
   }
   fclose(input);
