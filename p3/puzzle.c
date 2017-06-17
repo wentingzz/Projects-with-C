@@ -9,6 +9,10 @@
 #include <string.h>
 #include "grid.h"
 
+#define READ_VARS 4
+#define MAX_ROW 40
+#define MAX_WORD 10
+
 /**
   Program starting point
   
@@ -44,7 +48,7 @@ int main(int argc, char * argv[])
   int rpos;
   int cpos;
   for (int i = 0; i < wordCount; i++){
-    if(fscanf(input, "%c %d %d %s\n", &choice, &rpos, &cpos, words) != 4){
+    if(fscanf(input, "%c %d %d %s\n", &choice, &rpos, &cpos, words) != READ_VARS){
       fprintf(stderr, "Invalid input file\n");
       fclose(input);
       return 1;
@@ -64,6 +68,11 @@ int main(int argc, char * argv[])
       }
       writeVertical( rpos, cpos, words, row, col, board);
     }
+  }
+  if (board[0][0] == '1'){
+    fprintf(stderr, "Invalid input file\n");
+    fclose(input);
+    return 1;
   }
   printGrid(row, col, board);
   fclose(input);

@@ -9,8 +9,7 @@
 // #include "grid.h"
 
 /**
-  adds a word to the grid with the first letter at row rpos and column cpos
-  with a horizontal orientation
+  adds a word to the grid with the first letter at row rpos and column cpos with a horizontal orientation
   
   @param rpos row of the first letter of the word to add
   @param cpos column of the first letter of the word to add
@@ -19,12 +18,15 @@
   @param cols number of columns in the grid
   @param grid[rows][cols] represents the board
 */
-void writeHorizontal( int rpos, int cpos, char word[], int rows, 
-int cols, char grid[ rows ][ cols ] )
+void writeHorizontal( int rpos, int cpos, char word[], int rows, int cols, char grid[ rows ][ cols ] )
 {
   int count = 0;
   for (int i = cpos; i < cols; i++){
     if (word[count] == '\0'){
+      break;
+    }
+    if (grid[rpos][i] >= 'A' && grid[rpos][i] <= 'Z' && grid[rpos][i] != word[count]){
+      grid[0][0] = '1';
       break;
     }
     grid[rpos][i] = word[count++];
@@ -47,6 +49,10 @@ void writeVertical( int rpos, int cpos, char word[], int rows, int cols, char gr
   int count = 0;
   for (int i = rpos; i < rows; i++){
     if (word[count] == '\0'){
+      break;
+    }
+    if (grid[i][cpos] >= 'A' && grid[i][cpos] <= 'Z' && grid[i][cpos] != word[count]){
+      grid[0][0] = '1';
       break;
     }
     grid[i][cpos] = word[count++];
