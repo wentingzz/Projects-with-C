@@ -132,13 +132,11 @@ int main( int argc, char *argv[] )
   
   FILE * input = fopen(argv[1], "r");
   if (!input){
-    printf("path1");
     fprintf(stderr, "Can't open word file\n");
     fclose(input);
     return 1;
   }
   fclose(input);
-  printf("path2");
   readWords(argv[1]);
   if (wordCount >= MAX_WORDS){
     fprintf(stderr, "Invalid word file\n");
