@@ -72,23 +72,6 @@ bool getLetters( char * letters )
 }
 
 /**
-  Returns the length of the given array
-  
-  @param word array
-  @return the given array's length
-*/
-int arraylength(char const * word)
-{
-  int result = 0;
-  while (word[result] != '\0'){
-    if ((word[result] >= 'a' && word[result] <= 'z')){
-      result++;
-    }
-  }
-  return result;
-}
-
-/**
   Given a word and letters, this function returns true if the given word matches
   (contains exactly) the given letters
   
@@ -143,15 +126,13 @@ int main( int argc, char *argv[] )
   }
   
   char lett[MAX_LENGTH];
-  int status = 0;
   
   while (getLetters(&lett[0])){
     for (int i = 0; i <= wordCount; i++){
       if (matches(&words[i][0], &lett[0])){
         printf("%s\n", words[i]);
-        status = 0;
       }
     }
   }
-  return status;
+  return 0;
 }
