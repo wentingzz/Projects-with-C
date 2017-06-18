@@ -51,31 +51,35 @@ void readWords( char const *filename )
 */
 bool getLetters( char * letters )
 {
-  int count;
+  int count = 0;
   printf("letters> ");
   int ch;
-  while((ch = getchar()) != '\0'){
-    if (ch < 'a' || ch > 'z' || count == MAX_LENGTH){
-      count = 0;
-      printf("Invalid letters\nletters> ");
-      letters[0] = '\0';
-      break;
-    }
-    letters[count++] = ch;
-  }
-  return letters[0] != '\0';
-  // while (scanf("%s", letters) == 1){
-//     while (letters[count] != '\0'){
-//       if (letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
-//         count = 0;
-//         printf("Invalid letters\nletters> ");
-//         break;
-//       }
-//       count++;
+ //  while((ch = getchar()) != '\0'){
+//     if(ch == '\n' && letters[0] != '\0'){
+//       return true;
 //     }
-//     return true;
+//     if (ch < 'a' || ch > 'z' || count == MAX_LENGTH){
+//       count = 0;
+//       printf("Invalid letters\nletters> ");
+//       letters[0] = '\0';
+//       break;
+//     }
+//     printf("%c", (char)ch);
+//     letters[count++] = ch;
 //   }
-//   return false;
+//   return letters[0] != '\0';
+  while (scanf("%s", letters) == 1){
+    while (letters[count] != '\0'){
+      if (letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
+        count = 0;
+        printf("Invalid letters\nletters> ");
+        break;
+      }
+      count++;
+    }
+    return true;
+  }
+  return false;
 }
 
 /**
