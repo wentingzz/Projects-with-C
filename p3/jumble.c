@@ -81,12 +81,14 @@ bool getLetters( char * letters )
 */
 bool matches( char const * word, char const * letters )
 {
-  if (strlen( word ) != strlen(letters)){
+  int len1 = strlen(word);
+  int len2 = strlen(letters)
+  if (len1 != len2){
     return false;
   } else {
     int count1[ALPHABET] = {0};
     int count2[ALPHABET] = {0};
-    for (int i = 0; i < strlen(word); i++){
+    for (int i = 0; i < len1; i++){
       count1[(*(word + i)) - 'a']++;
       count2[(*(letters + i)) - 'a']++;
     }
