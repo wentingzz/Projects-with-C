@@ -53,18 +53,29 @@ bool getLetters( char * letters )
 {
   int count;
   printf("letters> ");
-  while (scanf("%s", letters) == 1){
-    while (letters[count] != '\0'){
-      if (letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
-        count = 0;
-        printf("Invalid letters\nletters> ");
-        break;
-      }
-      count++;
+  int ch;
+  while((ch = getchar()) != '\0'){
+    if (ch < 'a' || ch > 'z' || count == MAX_LENGTH){
+      count = 0;
+      printf("Invalid letters\nletters> ");
+      letters[0] = '\0';
+      break;
     }
-    return true;
+    letters[count++] = ch;
   }
-  return false;
+  return letters[0] != '\0';
+  // while (scanf("%s", letters) == 1){
+//     while (letters[count] != '\0'){
+//       if (letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
+//         count = 0;
+//         printf("Invalid letters\nletters> ");
+//         break;
+//       }
+//       count++;
+//     }
+//     return true;
+//   }
+//   return false;
 }
 
 /**
