@@ -82,7 +82,7 @@ bool getLetters( char * letters )
 bool matches( char const * word, char const * letters )
 {
   int len1 = strlen(word);
-  int len2 = strlen(letters)
+  int len2 = strlen(letters);
   if (len1 != len2){
     return false;
   } else {
