@@ -133,6 +133,7 @@ int main( int argc, char *argv[] )
     for (int i = 0; i <= wordCount; i++){
       if (matches(&words[i][0], &lett[0])){
         printf("%s\n", words[i]);
+        break;
       }
     }
   }
