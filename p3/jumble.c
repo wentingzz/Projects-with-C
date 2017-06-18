@@ -52,7 +52,7 @@ void readWords( char const *filename )
 bool getLetters( char * letters )
 {
   int count = 0;
-  printf("letters> ");
+  
   int ch;
  //  while((ch = getchar()) != '\0'){
 //     if(ch == '\n' && letters[0] != '\0'){
@@ -68,17 +68,21 @@ bool getLetters( char * letters )
 //     letters[count++] = ch;
 //   }
 //   return letters[0] != '\0';
-  while (scanf("%s", letters) == 1){
+  while (scanf("%s\n", letters) == 1){
+    if (count == 0){
+      printf("letters> ");
+    }
     while (letters[count] != '\0'){
       if (letters[count] < 'a' || letters[count] > 'z' || count == MAX_LENGTH){
         count = 0;
-        printf("Invalid letters\nletters> ");
+        printf("Invalid letters\n");
         break;
       }
       count++;
     }
     return true;
   }
+  printf("letters> ");
   return false;
 }
 
