@@ -4,7 +4,7 @@ CC = gcc
 # extra options we want the default compile rule to use.
 CFLAGS = -Wall -std=c99
 
-all: jumble puzzle puzzle.o grid.o
+all: jumble puzzle
 # Main depends on main.o (implicit) and function.o
 jumble: jumble.o
 puzzle: grid.o
@@ -23,3 +23,4 @@ clean:
 	rm puzzle.o
 	rm jumble.o
 	rm grid.o
+	rm output.txt
