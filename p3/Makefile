@@ -18,9 +18,9 @@ puzzle.o: grid.h
 grid.o: grid.h
 
 clean:
-	rm puzzle
-	rm jumble
-	rm puzzle.o
-	rm jumble.o
-	rm grid.o
+	rm -f puzzle
+	rm -f jumble
+	rm -f puzzle.o
+	rm -f jumble.o
+	rm -f grid.o
 	rm output.txt
