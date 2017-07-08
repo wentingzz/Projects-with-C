@@ -49,7 +49,7 @@ void addModel(Scene *s, Model *m)
   }
   int idx = s->mCount;
   for (int i = 0; i < s->mCount; i++){
-    if (strncmp(m->name, s->mList[i]->name) < 0){
+    if (strcmp(m->name, s->mList[i]->name) < 0){
       idx = i;
       break;
     }
