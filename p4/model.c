@@ -10,7 +10,8 @@
 #include <math.h>
 #include "model.h"
 
-#define PI 3.14159265
+#define RADIAN 0.0174533
+#define CAP 10
 
 /**
   This function is to read a model from a file with the given name and
@@ -28,12 +29,12 @@ Model *loadModel( char const *fname )
     fprintf(stderr, "Can't open file: %s", fname);
     return NULL;
   }
-  int cap = 10;
+  int cap = CAP;
   int pCount = 0;
   double (*pList)[2] = (double (*)[2])malloc( cap * 2 * sizeof(double) );
   
   //(pList + pCount)[0]
-  while (fscanf(fp, "%lf %lf\n%lf %lf\n", &pList[pCount][0], 
+  while (fscanf(fp, "%lf %lf\n%lf %lf\n", &pList[pCount][0],
   &pList[pCount][1],  &pList[pCount + 1][0], &pList[pCount + 1][1]) == 4){
     pCount += 2;
     if (pCount >= cap){
@@ -81,8 +82,8 @@ void translateModel(double pt[ 2 ], double a, double b)
 void rotateModel(double pt[ 2 ], double a, double b)
 {
   int x = pt[0];
-  double co = cos(a * PI / 180);
-  double si = sin(a * PI / 180);
+  double co = cos(a * RADIAN);
+  double si = sin(a * RADIAN);
   pt[0] = pt[0] * co - pt[1] * si;
   pt[1] = x * si + pt[1] * co;
 }

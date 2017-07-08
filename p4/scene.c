@@ -10,6 +10,8 @@
 #include "scene.h"
 #include "model.h"
 
+#define CAP 10
+
 /**
   This function is to dynamically allocate an instance of Scene, and initialize its fields
   
@@ -19,7 +21,7 @@ Scene *makeScene()
 {
   Scene *s = (Scene *) malloc(sizeof(Scene));
   s->mCount = 0;
-  s->mCap = 10;
+  s->mCap = CAP;
   s->mList = (Model **)malloc(s->mCap * sizeof(Model*));
   return s;
 }
@@ -42,12 +44,12 @@ void freeScene( Scene *s )
 void addModel(Scene *s, Model *m)
 {
   if (s->mCount >= s->mCap - 1){
-    s->mCap += 10;
+    s->mCap += CAP;
     s->mList = (Model **)realloc(s->mList, s->mCap * sizeof(Model*));
   }
   int idx = s->mCount;
   for (int i = 0; i < s->mCount; i++){
-    if (strncmp(m->name, s->mList[i]->name, 20) < 0){
+    if (strncmp(m->name, s->mList[i]->name) < 0){
       idx = i;
       break;
     }
@@ -85,8 +87,8 @@ void saveScene( Scene *s, char const *fname)
   
   for (int i = 0; i < s->mCount; i++){
     for (int j = 0; j < s->mList[i]->pCount; j += 2){
-      fprintf(fp, "%.3lf %.3lf\n%.3lf %.3lf\n\n", 
-      s->mList[i]->pList[j][0], s->mList[i]->pList[j][1], 
+      fprintf(fp, "%.3lf %.3lf\n%.3lf %.3lf\n\n",
+      s->mList[i]->pList[j][0], s->mList[i]->pList[j][1],
       s->mList[i]->pList[j + 1][0], s->mList[i]->pList[j + 1][1]);
     }
   }
@@ -99,7 +101,7 @@ void saveScene( Scene *s, char const *fname)
   
   @param m dynamically allocated memory used to store the given Model
 */
-bool applyToScene( Scene *s, char const *name, 
+bool applyToScene( Scene *s, char const *name,
 void (*f)( double pt[ 2 ], double a, double b ), double a, double b )
 {
   for (int i = 0; i < s->mCount; i++){

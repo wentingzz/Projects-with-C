@@ -10,8 +10,7 @@
 #include "scene.h"
 #include "model.h"
 
-#include <time.h>
-#define READ_VARS 4
+#define NAME_LIMIT 20
 
 
 /**
@@ -25,16 +24,16 @@ int main()
   printf("cmd %d> ", ++cmd);
   
   char choice[10];
-  char name[21];
+  char name[NAME_LIMIT + 1];
   Scene *s;
-  Model *m; 
+  Model *m;
   while (scanf("%9s", choice) == 1){
     if (cmd == 1){
       s = makeScene();
     }
 
     if (strcmp(choice, "load") == 0){
-      char fname[21];
+      char fname[NAME_LIMIT + 1];
       if (scanf("%20s %20s", name, fname) == 2) {
           m = loadModel(fname);
           if (m){
