@@ -6,7 +6,7 @@ CFLAGS = -Wall -std=c99 -g
 
 # Main depends on main.o (implicit) and function.o
 drawing: model.o scene.o
-	gcc model.o scene.o -o drawing -lm
+	gcc model.o scene.o -o main -lm
 
 model: model.h
 	gcc -Wall -std=c99 -c model.c -lm
