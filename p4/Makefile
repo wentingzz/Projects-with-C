@@ -2,7 +2,7 @@
 CC = gcc
 
 # extra options we want the default compile rule to use.
-CFLAGS = -Wall -std=c99 -g
+CFLAGS = -Wall -std=c99 -g -lm
 
 # Main depends on main.o (implicit) and function.o
 drawing: model.o scene.o
