@@ -5,9 +5,10 @@ CC = gcc
 CFLAGS = -Wall -std=c99 -g
 
 # Main
-drawing: model.o scene.o
+drawing: drawing.o model.o scene.o
+	gcc drawing.o model.o scene.o -o drawing -lm
 
-model: model.h
+model.o: model.h
 	gcc -Wall -std=c99 -c model.c -lm
 scene.o: scene.h
 	gcc -Wall -std=c99 -c scene.c -lm
