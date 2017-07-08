@@ -15,7 +15,7 @@
 /**
   This function is to read a model from a file with the given name and
   return a pointer to a dynamically allocated instance of model
-  If the input file can't be opened or if the model isn't in the right format,
+  if  the input file can't be opened or if  the model isn't in the right for mat,
   the function will print an error message and return NULL
   
   @param fname file's name containing modles
@@ -24,7 +24,7 @@
 Model *loadModel( char const *fname )
 {
   FILE *fp = fopen(fname, "r");
-  if(!fp){
+  if (!fp){
     fprintf(stderr, "Can't open file: %s", fname);
     return NULL;
   }
@@ -33,17 +33,16 @@ Model *loadModel( char const *fname )
   double (*pList)[2] = (double (*)[2])malloc( cap * 2 * sizeof(double) );
   
   //(pList + pCount)[0]
-  while(fscanf(fp, "%lf %lf\n%lf %lf\n", &pList[pCount][0], &pList[pCount][1],  &pList[pCount + 1][0], &pList[pCount + 1][1]) == 4){
-//     printf("%.3lf %.3lf\n%.3lf %.3lf\n\n", pList[pCount][0], pList[pCount][1],  pList[pCount + 1][0], pList[pCount + 1][1]);
-    
+  while (fscanf(fp, "%lf %lf\n%lf %lf\n", &pList[pCount][0], 
+  &pList[pCount][1],  &pList[pCount + 1][0], &pList[pCount + 1][1]) == 4){
     pCount += 2;
-    if(pCount >= cap){
+    if (pCount >= cap){
       cap *= 2;
       pList = (double (*)[2])realloc( pList, cap * 2 * sizeof(double) );
     }
   }
-  if(fscanf(fp, "%*[^\n]s") == 1){
-    fprintf(stderr, "Invalid model format: %s", fname);
+  if (fscanf(fp, "%*[^\n]s") == 1){
+    fprintf(stderr, "Invalid model for mat: %s", fname);
     free(pList);
     fclose(fp);
     return NULL;
@@ -89,16 +88,16 @@ void rotateModel(double pt[ 2 ], double a, double b)
 }
 
 /**
-  This function is to perform geometric transformation to selected model in scene
+  This function is to perfor m geometric transfor mation to selected model in scene
   
   @param m selected model
-  @param f function accepts point to transform, a and b are given by applyToScene()
+  @param f function accepts point to transfor m, a and b are given by applyToScene()
   @param m dynamically allocated memory used to store the given Model
   @param m dynamically allocated memory used to store the given Model
 */
 void applyToModel( Model *m, void (*f)( double pt[ 2 ], double a, double b ), double a, double b )
 {
-  for(int i = 0; i < m->pCount; i++){
+  for (int i = 0; i < m->pCount; i++){
     f(m->pList[i], a, b);
   }
 }

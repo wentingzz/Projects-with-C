@@ -32,7 +32,7 @@ Scene *makeScene()
 void freeScene( Scene *s )
 {
   int cou = s->mCount;
-  for(int i = 0; i < cou; i++){
+  for (int i = 0; i < cou; i++){
     freeModel(s->mList[i]);
   }
   free(s->mList);
@@ -41,19 +41,18 @@ void freeScene( Scene *s )
 
 void addModel(Scene *s, Model *m)
 {
-  if(s->mCount >= s->mCap - 1){
+  if (s->mCount >= s->mCap - 1){
     s->mCap += 10;
     s->mList = (Model **)realloc(s->mList, s->mCap * sizeof(Model*));
   }
-            
   int idx = s->mCount;
-  for(int i = 0; i < s->mCount; i++){
-    if(strncmp(m->name, s->mList[i]->name, 20) < 0){
+  for (int i = 0; i < s->mCount; i++){
+    if (strncmp(m->name, s->mList[i]->name, 20) < 0){
       idx = i;
       break;
     }
   }
-  for(int i = s->mCount - 1; i >= idx; i--){
+  for (int i = s->mCount - 1; i >= idx; i--){
     s->mList[i + 1] = s->mList[i];
   }
   s->mList[idx] = m;
@@ -63,15 +62,15 @@ void addModel(Scene *s, Model *m)
 void deleteModel(Scene *s, char const *name)
 {
   int idx = -1;
-  for(int i = 0; i < s->mCount; i++){
-    if(strcmp(s->mList[i]->name, name) == 0){
+  for (int i = 0; i < s->mCount; i++){
+    if (strcmp(s->mList[i]->name, name) == 0){
       idx = i;
       break;
     }
   }
-  if(idx != -1){
+  if (idx != -1){
     freeModel(s->mList[idx]);
-    for(int i = idx; i < s->mCount - 1; i++){
+    for (int i = idx; i < s->mCount - 1; i++){
       s->mList[i] = s->mList[i + 1];
     }
     s->mCount--;
@@ -80,13 +79,15 @@ void deleteModel(Scene *s, char const *name)
 void saveScene( Scene *s, char const *fname)
 {
   FILE *fp = fopen(fname, "w");
-  if(!fp){
+  if (!fp){
     fprintf(stderr, "Can't open file: %s", fname);
   }
   
-  for(int i = 0; i < s->mCount; i++){
-    for(int j = 0; j < s->mList[i]->pCount; j += 2){
-      fprintf(fp, "%.3lf %.3lf\n%.3lf %.3lf\n\n", s->mList[i]->pList[j][0], s->mList[i]->pList[j][1], s->mList[i]->pList[j + 1][0], s->mList[i]->pList[j + 1][1]);
+  for (int i = 0; i < s->mCount; i++){
+    for (int j = 0; j < s->mList[i]->pCount; j += 2){
+      fprintf(fp, "%.3lf %.3lf\n%.3lf %.3lf\n\n", 
+      s->mList[i]->pList[j][0], s->mList[i]->pList[j][1], 
+      s->mList[i]->pList[j + 1][0], s->mList[i]->pList[j + 1][1]);
     }
   }
   fclose(fp);
@@ -94,14 +95,15 @@ void saveScene( Scene *s, char const *fname)
 
 /**
   This function is to find the model in the list of models matching the given name
-  and uses the given function to apply a transformation to the model
+  and uses the given function to apply a transfor mation to the model
   
   @param m dynamically allocated memory used to store the given Model
 */
-bool applyToScene( Scene *s, char const *name, void (*f)( double pt[ 2 ], double a, double b ), double a, double b )
+bool applyToScene( Scene *s, char const *name, 
+void (*f)( double pt[ 2 ], double a, double b ), double a, double b )
 {
-  for(int i = 0; i < s->mCount; i++){
-    if(strcmp(s->mList[i]->name, name) == 0){
+  for (int i = 0; i < s->mCount; i++){
+    if (strcmp(s->mList[i]->name, name) == 0){
       applyToModel( s->mList[i], f, a, b);
     }
   }
