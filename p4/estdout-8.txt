@@ -1,0 +1,6 @@
+cmd 1> cmd 2> cmd 3> cmd 4> cmd 5> cmd 6> background house.txt (25)
+body1 body.txt (5)
+body2 body.txt (5)
+head1 happy.txt (37)
+head2 sad.txt (37)
+cmd 7> cmd 8> cmd 9> cmd 10> cmd 11> cmd 12> cmd 13> cmd 14> cmd 15> cmd 16> 

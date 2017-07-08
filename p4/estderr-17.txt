@@ -1,0 +1,4 @@
+Can't open file: nope.txt
+Can't open file: jfjfjf.txt
+Can't open file: nada.txt
+Can't open file: jfjfjf.txt

@@ -1,0 +1,4 @@
+load m square.txt
+scale m 1.5
+save output.txt
+quit

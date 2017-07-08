@@ -1,0 +1,2 @@
+cmd 1> cmd 2> cmd 3> cmd 4> cmd 5> big-but-not-too-long circle.txt (32)
+cmd 6> cmd 7> 

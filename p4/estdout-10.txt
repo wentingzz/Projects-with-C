@@ -1,0 +1,9 @@
+cmd 1> cmd 2> cmd 3> cmd 4> cmd 5> cmd 6> cmd 7> cmd 8> cmd 9> s1 square.txt (4)
+s2 square.txt (4)
+s3 square.txt (4)
+s4 square.txt (4)
+s5 square.txt (4)
+s6 square.txt (4)
+s7 square.txt (4)
+s8 square.txt (4)
+cmd 10> cmd 11> cmd 12> cmd 13> cmd 14> cmd 15> cmd 16> cmd 17> cmd 18> cmd 19> cmd 20> cmd 21> cmd 22> cmd 23> cmd 24> cmd 25> 

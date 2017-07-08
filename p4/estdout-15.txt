@@ -1,0 +1,4 @@
+cmd 1> cmd 2> cmd 3> s square.txt (4)
+cmd 4> cmd 5> c circle.txt (32)
+s square.txt (4)
+cmd 6> cmd 7> cmd 8> cmd 9> cmd 10> cmd 11> cmd 12> 

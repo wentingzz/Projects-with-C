@@ -1,0 +1,25 @@
+load s1 square.txt
+load s2 square.txt
+load s3 square.txt
+load s4 square.txt
+load s5 square.txt
+load s6 square.txt
+load s7 square.txt
+load s8 square.txt
+list
+rotate s2 10
+scale s2 1.1
+rotate s3 20
+scale s3 1.2
+rotate s4 30
+scale s4 1.3
+rotate s5 40
+scale s5 1.4
+rotate s6 50
+scale s6 1.5
+rotate s7 60
+scale s7 1.6
+rotate s8 70
+scale s8 1.7
+save output.txt
+quit

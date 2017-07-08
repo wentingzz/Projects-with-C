@@ -1,0 +1,16 @@
+load body1 body.txt
+load head1 happy.txt
+load body2 body.txt
+load head2 sad.txt
+load background house.txt
+list
+scale head1 0.4
+translate body1 -1100 0
+translate head1 -1100 410
+translate body2 1100 0
+scale head2 0.4
+translate head2 1100 410
+scale background 7.0
+translate background 0 100
+save output.txt
+quit

@@ -1,0 +1,6 @@
+load m maze.txt
+scale m 5.0
+translate m 10.0 5.0
+rotate m 15.0
+save output.txt
+quit

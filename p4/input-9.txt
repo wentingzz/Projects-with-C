@@ -1,0 +1,4 @@
+load l line.txt
+rotate l 15.0
+save output.txt
+quit

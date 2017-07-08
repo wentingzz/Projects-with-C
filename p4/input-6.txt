@@ -1,0 +1,10 @@
+load s1 square.txt
+load s2 square.txt
+load s3 square.txt
+load s4 square.txt
+scale s2 2
+scale s3 3
+scale s4 4
+list
+save output.txt
+quit

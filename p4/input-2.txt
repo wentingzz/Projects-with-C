@@ -1,0 +1,3 @@
+load c1 circle.txt
+save output.txt
+quit

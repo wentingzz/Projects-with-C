@@ -1,0 +1,4 @@
+cmd 1> cmd 2> cmd 3> cmd 4> cloak triangle.txt (3)
+stone circle.txt (32)
+wand line.txt (1)
+cmd 5> cmd 6> 

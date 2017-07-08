@@ -1,0 +1,98 @@
+load c1 circle.txt
+translate c1 10 20
+rotate c1 0.000000
+load c2 circle.txt
+translate c2 10 20
+rotate c2 11.250000
+load c3 circle.txt
+translate c3 10 20
+rotate c3 22.500000
+load c4 circle.txt
+translate c4 10 20
+rotate c4 33.750000
+load c5 circle.txt
+translate c5 10 20
+rotate c5 45.000000
+load c6 circle.txt
+translate c6 10 20
+rotate c6 56.250000
+load c7 circle.txt
+translate c7 10 20
+rotate c7 67.500000
+load c8 circle.txt
+translate c8 10 20
+rotate c8 78.750000
+load c9 circle.txt
+translate c9 10 20
+rotate c9 90.000000
+load c10 circle.txt
+translate c10 10 20
+rotate c10 101.250000
+load c11 circle.txt
+translate c11 10 20
+rotate c11 112.500000
+load c12 circle.txt
+translate c12 10 20
+rotate c12 123.750000
+load c13 circle.txt
+translate c13 10 20
+rotate c13 135.000000
+load c14 circle.txt
+translate c14 10 20
+rotate c14 146.250000
+load c15 circle.txt
+translate c15 10 20
+rotate c15 157.500000
+load c16 circle.txt
+translate c16 10 20
+rotate c16 168.750000
+load c17 circle.txt
+translate c17 10 20
+rotate c17 180.000000
+load c18 circle.txt
+translate c18 10 20
+rotate c18 191.250000
+load c19 circle.txt
+translate c19 10 20
+rotate c19 202.500000
+load c20 circle.txt
+translate c20 10 20
+rotate c20 213.750000
+load c21 circle.txt
+translate c21 10 20
+rotate c21 225.000000
+load c22 circle.txt
+translate c22 10 20
+rotate c22 236.250000
+load c23 circle.txt
+translate c23 10 20
+rotate c23 247.500000
+load c24 circle.txt
+translate c24 10 20
+rotate c24 258.750000
+load c25 circle.txt
+translate c25 10 20
+rotate c25 270.000000
+load c26 circle.txt
+translate c26 10 20
+rotate c26 281.250000
+load c27 circle.txt
+translate c27 10 20
+rotate c27 292.500000
+load c28 circle.txt
+translate c28 10 20
+rotate c28 303.750000
+load c29 circle.txt
+translate c29 10 20
+rotate c29 315.000000
+load c30 circle.txt
+translate c30 10 20
+rotate c30 326.250000
+load c31 circle.txt
+translate c31 10 20
+rotate c31 337.500000
+load c32 circle.txt
+translate c32 10 20
+rotate c32 348.750000
+save alt-output.txt
+quit

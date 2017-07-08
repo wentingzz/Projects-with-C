@@ -1,0 +1,10 @@
+load bert square.txt
+load amy circle.txt
+load charles triangle.txt
+load amy line.txt
+delete amy
+load amy line.txt
+delete charles
+delete charles
+save output.txt
+quit

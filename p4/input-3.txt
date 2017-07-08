@@ -1,0 +1,5 @@
+load c circle.txt
+load s square.txt
+list
+save output.txt
+quit

@@ -1,0 +1,1353 @@
+load Bettina-b body.txt
+load Bettina-h happy.txt
+load Forrest-b body.txt
+load Forrest-h happy.txt
+load Mia-b body.txt
+load Mia-h happy.txt
+load Sheree-b body.txt
+load Sheree-h happy.txt
+load Tyrone-b body.txt
+load Tyrone-h happy.txt
+load Pamela-b body.txt
+load Pamela-h happy.txt
+load Armida-b body.txt
+load Armida-h happy.txt
+load Tricia-b body.txt
+load Tricia-h happy.txt
+load Katina-b body.txt
+load Katina-h happy.txt
+load Elena-b body.txt
+load Elena-h happy.txt
+load Lindsey-b body.txt
+load Lindsey-h happy.txt
+load Jung-b body.txt
+load Jung-h happy.txt
+load Roseann-b body.txt
+load Roseann-h happy.txt
+load Brain-b body.txt
+load Brain-h happy.txt
+load Peter-b body.txt
+load Peter-h happy.txt
+load Claudio-b body.txt
+load Claudio-h happy.txt
+load Karyn-b body.txt
+load Karyn-h happy.txt
+load Francesco-b body.txt
+load Francesco-h happy.txt
+load Nena-b body.txt
+load Nena-h happy.txt
+load Dorothea-b body.txt
+load Dorothea-h happy.txt
+load Reginald-b body.txt
+load Reginald-h happy.txt
+load Dwayne-b body.txt
+load Dwayne-h happy.txt
+load Elvis-b body.txt
+load Elvis-h happy.txt
+load Roma-b body.txt
+load Roma-h happy.txt
+load Marquita-b body.txt
+load Marquita-h happy.txt
+load Ernesto-b body.txt
+load Ernesto-h happy.txt
+load Lucy-b body.txt
+load Lucy-h happy.txt
+load Ethan-b body.txt
+load Ethan-h happy.txt
+load Marylin-b body.txt
+load Marylin-h happy.txt
+load Evonne-b body.txt
+load Evonne-h happy.txt
+load Tami-b body.txt
+load Tami-h happy.txt
+load Shellie-b body.txt
+load Shellie-h happy.txt
+load Mallory-b body.txt
+load Mallory-h happy.txt
+load Homer-b body.txt
+load Homer-h happy.txt
+load Renita-b body.txt
+load Renita-h happy.txt
+load Julian-b body.txt
+load Julian-h happy.txt
+load Valentina-b body.txt
+load Valentina-h happy.txt
+load Ronald-b body.txt
+load Ronald-h happy.txt
+load Leta-b body.txt
+load Leta-h happy.txt
+load June-b body.txt
+load June-h happy.txt
+load Carmelita-b body.txt
+load Carmelita-h happy.txt
+load Venus-b body.txt
+load Venus-h happy.txt
+load Katie-b body.txt
+load Katie-h happy.txt
+load Ali-b body.txt
+load Ali-h happy.txt
+load Sharron-b body.txt
+load Sharron-h happy.txt
+load Krystle-b body.txt
+load Krystle-h happy.txt
+load Stan-b body.txt
+load Stan-h happy.txt
+load Kimberlee-b body.txt
+load Kimberlee-h happy.txt
+load Maude-b body.txt
+load Maude-h happy.txt
+load Trey-b body.txt
+load Trey-h happy.txt
+load Rodrick-b body.txt
+load Rodrick-h happy.txt
+load Avis-b body.txt
+load Avis-h happy.txt
+load Debi-b body.txt
+load Debi-h happy.txt
+load Roxana-b body.txt
+load Roxana-h happy.txt
+load Nicola-b body.txt
+load Nicola-h happy.txt
+load Jenifer-b body.txt
+load Jenifer-h happy.txt
+load Elisha-b body.txt
+load Elisha-h happy.txt
+load Foster-b body.txt
+load Foster-h happy.txt
+load Simone-b body.txt
+load Simone-h happy.txt
+load Felipe-b body.txt
+load Felipe-h happy.txt
+load Kermit-b body.txt
+load Kermit-h happy.txt
+load Cordell-b body.txt
+load Cordell-h happy.txt
+load Guadalupe-b body.txt
+load Guadalupe-h happy.txt
+load Alyson-b body.txt
+load Alyson-h happy.txt
+load Errol-b body.txt
+load Errol-h happy.txt
+load Zackary-b body.txt
+load Zackary-h happy.txt
+load Bradly-b body.txt
+load Bradly-h happy.txt
+load Tuan-b body.txt
+load Tuan-h happy.txt
+load Jonas-b body.txt
+load Jonas-h happy.txt
+load Boyd-b body.txt
+load Boyd-h happy.txt
+load Clyde-b body.txt
+load Clyde-h happy.txt
+load Chrissy-b body.txt
+load Chrissy-h happy.txt
+load Morgan-b body.txt
+load Morgan-h happy.txt
+load Rosanne-b body.txt
+load Rosanne-h happy.txt
+load Jamaal-b body.txt
+load Jamaal-h happy.txt
+load Windy-b body.txt
+load Windy-h happy.txt
+load Gilda-b body.txt
+load Gilda-h happy.txt
+load Corinne-b body.txt
+load Corinne-h happy.txt
+load Dedra-b body.txt
+load Dedra-h happy.txt
+load Cora-b body.txt
+load Cora-h happy.txt
+load Henry-b body.txt
+load Henry-h happy.txt
+load Brett-b body.txt
+load Brett-h happy.txt
+load Barrett-b body.txt
+load Barrett-h happy.txt
+load Theresa-b body.txt
+load Theresa-h happy.txt
+load Helene-b body.txt
+load Helene-h happy.txt
+load Josefina-b body.txt
+load Josefina-h happy.txt
+load Junior-b body.txt
+load Junior-h happy.txt
+load Stacy-b body.txt
+load Stacy-h happy.txt
+load Zoila-b body.txt
+load Zoila-h happy.txt
+load Pamala-b body.txt
+load Pamala-h happy.txt
+load Francesca-b body.txt
+load Francesca-h happy.txt
+load Dee-b body.txt
+load Dee-h happy.txt
+load Eloisa-b body.txt
+load Eloisa-h happy.txt
+load Darwin-b body.txt
+load Darwin-h happy.txt
+load Freeman-b body.txt
+load Freeman-h happy.txt
+load Darrin-b body.txt
+load Darrin-h happy.txt
+load Lucretia-b body.txt
+load Lucretia-h happy.txt
+load Abdul-b body.txt
+load Abdul-h happy.txt
+load Scottie-b body.txt
+load Scottie-h happy.txt
+load Rebeca-b body.txt
+load Rebeca-h happy.txt
+load Melodie-b body.txt
+load Melodie-h happy.txt
+load Susan-b body.txt
+load Susan-h happy.txt
+load Jenni-b body.txt
+load Jenni-h happy.txt
+load Wendell-b body.txt
+load Wendell-h happy.txt
+load Heath-b body.txt
+load Heath-h happy.txt
+load Kate-b body.txt
+load Kate-h happy.txt
+load Daniel-b body.txt
+load Daniel-h happy.txt
+load Lilly-b body.txt
+load Lilly-h happy.txt
+load Tera-b body.txt
+load Tera-h happy.txt
+load Tabatha-b body.txt
+load Tabatha-h happy.txt
+load Laverne-b body.txt
+load Laverne-h happy.txt
+load Mari-b body.txt
+load Mari-h happy.txt
+load Eddie-b body.txt
+load Eddie-h happy.txt
+load Ernest-b body.txt
+load Ernest-h happy.txt
+load Elden-b body.txt
+load Elden-h happy.txt
+load Deshawn-b body.txt
+load Deshawn-h happy.txt
+load Brianne-b body.txt
+load Brianne-h happy.txt
+load Angelo-b body.txt
+load Angelo-h happy.txt
+load Debrah-b body.txt
+load Debrah-h happy.txt
+load Doyle-b body.txt
+load Doyle-h happy.txt
+load Virgilio-b body.txt
+load Virgilio-h happy.txt
+load Felecia-b body.txt
+load Felecia-h happy.txt
+load Stephanie-b body.txt
+load Stephanie-h happy.txt
+load Jae-b body.txt
+load Jae-h happy.txt
+load Parker-b body.txt
+load Parker-h happy.txt
+load Wilford-b body.txt
+load Wilford-h happy.txt
+load Noble-b body.txt
+load Noble-h happy.txt
+load Sallie-b body.txt
+load Sallie-h happy.txt
+load Lorraine-b body.txt
+load Lorraine-h happy.txt
+load Brant-b body.txt
+load Brant-h happy.txt
+load Opal-b body.txt
+load Opal-h happy.txt
+load Jonnie-b body.txt
+load Jonnie-h happy.txt
+load Chong-b body.txt
+load Chong-h happy.txt
+load Trudy-b body.txt
+load Trudy-h happy.txt
+load Rey-b body.txt
+load Rey-h happy.txt
+load Rodney-b body.txt
+load Rodney-h happy.txt
+load Stella-b body.txt
+load Stella-h happy.txt
+load Herlinda-b body.txt
+load Herlinda-h happy.txt
+load Kisha-b body.txt
+load Kisha-h happy.txt
+load Sierra-b body.txt
+load Sierra-h happy.txt
+load Millicent-b body.txt
+load Millicent-h happy.txt
+load Domingo-b body.txt
+load Domingo-h happy.txt
+load Stewart-b body.txt
+load Stewart-h happy.txt
+load Erich-b body.txt
+load Erich-h happy.txt
+load Jamel-b body.txt
+load Jamel-h happy.txt
+load Stephany-b body.txt
+load Stephany-h happy.txt
+load Jeffry-b body.txt
+load Jeffry-h happy.txt
+load Carmelo-b body.txt
+load Carmelo-h happy.txt
+load Eloise-b body.txt
+load Eloise-h happy.txt
+load Tosha-b body.txt
+load Tosha-h happy.txt
+load Casandra-b body.txt
+load Casandra-h happy.txt
+load Norris-b body.txt
+load Norris-h happy.txt
+load Fatima-b body.txt
+load Fatima-h happy.txt
+load Zena-b body.txt
+load Zena-h happy.txt
+load Zona-b body.txt
+load Zona-h happy.txt
+load Victor-b body.txt
+load Victor-h happy.txt
+load Clayton-b body.txt
+load Clayton-h happy.txt
+load Otha-b body.txt
+load Otha-h happy.txt
+load Delmar-b body.txt
+load Delmar-h happy.txt
+load Cecelia-b body.txt
+load Cecelia-h happy.txt
+load Roderick-b body.txt
+load Roderick-h happy.txt
+load Gerri-b body.txt
+load Gerri-h happy.txt
+load Jack-b body.txt
+load Jack-h happy.txt
+load Harris-b body.txt
+load Harris-h happy.txt
+load Ashleigh-b body.txt
+load Ashleigh-h happy.txt
+load Maryanne-b body.txt
+load Maryanne-h happy.txt
+load Susanne-b body.txt
+load Susanne-h happy.txt
+load Zachery-b body.txt
+load Zachery-h happy.txt
+load Anita-b body.txt
+load Anita-h happy.txt
+load Reuben-b body.txt
+load Reuben-h happy.txt
+load Gemma-b body.txt
+load Gemma-h happy.txt
+load Kathi-b body.txt
+load Kathi-h happy.txt
+load Claude-b body.txt
+load Claude-h happy.txt
+load Dewitt-b body.txt
+load Dewitt-h happy.txt
+load Theron-b body.txt
+load Theron-h happy.txt
+load Andrew-b body.txt
+load Andrew-h happy.txt
+load Colleen-b body.txt
+load Colleen-h happy.txt
+load Martin-b body.txt
+load Martin-h happy.txt
+load Latasha-b body.txt
+load Latasha-h happy.txt
+load Candy-b body.txt
+load Candy-h happy.txt
+load Hector-b body.txt
+load Hector-h happy.txt
+load Mitch-b body.txt
+load Mitch-h happy.txt
+load Luther-b body.txt
+load Luther-h happy.txt
+load Randy-b body.txt
+load Randy-h happy.txt
+load Wally-b body.txt
+load Wally-h happy.txt
+load Edward-b body.txt
+load Edward-h happy.txt
+load Frederic-b body.txt
+load Frederic-h happy.txt
+load Maritza-b body.txt
+load Maritza-h happy.txt
+load Ruth-b body.txt
+load Ruth-h happy.txt
+load Miranda-b body.txt
+load Miranda-h happy.txt
+load Alphonse-b body.txt
+load Alphonse-h happy.txt
+load Rich-b body.txt
+load Rich-h happy.txt
+load Alfreda-b body.txt
+load Alfreda-h happy.txt
+load Sheri-b body.txt
+load Sheri-h happy.txt
+load Ruthann-b body.txt
+load Ruthann-h happy.txt
+load Benito-b body.txt
+load Benito-h happy.txt
+load Abram-b body.txt
+load Abram-h happy.txt
+load Isabell-b body.txt
+load Isabell-h happy.txt
+load Toya-b body.txt
+load Toya-h happy.txt
+load Carleen-b body.txt
+load Carleen-h happy.txt
+load Tasha-b body.txt
+load Tasha-h happy.txt
+load Eboni-b body.txt
+load Eboni-h happy.txt
+load Janice-b body.txt
+load Janice-h happy.txt
+load Julianna-b body.txt
+load Julianna-h happy.txt
+load Latosha-b body.txt
+load Latosha-h happy.txt
+load Jamison-b body.txt
+load Jamison-h happy.txt
+load Molly-b body.txt
+load Molly-h happy.txt
+load Lola-b body.txt
+load Lola-h happy.txt
+load Adelaide-b body.txt
+load Adelaide-h happy.txt
+load Hanna-b body.txt
+load Hanna-h happy.txt
+load Cathrine-b body.txt
+load Cathrine-h happy.txt
+load Davis-b body.txt
+load Davis-h happy.txt
+load Wilber-b body.txt
+load Wilber-h happy.txt
+load Carolyn-b body.txt
+load Carolyn-h happy.txt
+load Maynard-b body.txt
+load Maynard-h happy.txt
+load Edie-b body.txt
+load Edie-h happy.txt
+load Janel-b body.txt
+load Janel-h happy.txt
+load Dillon-b body.txt
+load Dillon-h happy.txt
+load Belinda-b body.txt
+load Belinda-h happy.txt
+load Alda-b body.txt
+load Alda-h happy.txt
+load Damion-b body.txt
+load Damion-h happy.txt
+load May-b body.txt
+load May-h happy.txt
+load Keisha-b body.txt
+load Keisha-h happy.txt
+load Ilona-b body.txt
+load Ilona-h happy.txt
+load Bryce-b body.txt
+load Bryce-h happy.txt
+rotate Simone-h -3.8
+scale Delmar-h 0.4
+rotate Wilford-h 39.2
+rotate Edward-h -36.0
+rotate Mallory-h 10.1
+rotate Wendell-h 37.8
+rotate Boyd-h 15.1
+scale Tasha-h 0.4
+rotate Randy-h -4.3
+scale Zena-h 0.4
+scale Elvis-h 0.4
+scale Maude-h 0.4
+scale Ali-h 0.4
+rotate May-h 13.6
+rotate Susanne-h 35.1
+rotate Anita-h 44.8
+scale Dorothea-h 0.4
+rotate Zachery-h -33.7
+scale Theron-h 0.4
+scale Tricia-h 0.4
+rotate Zena-h -32.9
+rotate Stephany-h -23.4
+scale Josefina-h 0.4
+scale Jae-h 0.4
+rotate Brain-h 1.2
+scale Toya-h 0.4
+rotate Armida-h -14.8
+rotate Elden-h -28.1
+scale Lola-h 0.4
+scale Felipe-h 0.4
+rotate Roma-h 27.4
+rotate Helene-h 29.6
+scale Lucretia-h 0.4
+scale Harris-h 0.4
+rotate Deshawn-h -20.1
+scale Kimberlee-h 0.4
+scale Roma-h 0.4
+rotate Darrin-h 38.2
+rotate Tuan-h 23.4
+rotate Valentina-h -0.6
+scale Ronald-h 0.4
+scale Domingo-h 0.4
+rotate Guadalupe-h 36.2
+rotate Jenni-h 40.5
+scale Bettina-h 0.4
+scale Noble-h 0.4
+rotate Trey-h 40.4
+rotate Kermit-h -23.6
+rotate Peter-h 40.7
+scale Susan-h 0.4
+rotate Eddie-h -4.8
+scale Ethan-h 0.4
+scale Belinda-h 0.4
+scale Julianna-h 0.4
+rotate Dee-h 8.0
+scale Avis-h 0.4
+rotate Edie-h -16.5
+scale Francesco-h 0.4
+scale Rich-h 0.4
+scale Deshawn-h 0.4
+scale Marquita-h 0.4
+rotate Tricia-h 24.1
+scale Ilona-h 0.4
+rotate Tyrone-h 37.0
+scale Reuben-h 0.4
+rotate Ali-h 35.2
+rotate Zona-h 1.8
+rotate Morgan-h -5.6
+rotate Felecia-h -33.7
+rotate Katie-h -9.0
+scale Anita-h 0.4
+rotate Cathrine-h 13.5
+rotate Mitch-h 4.7
+scale Maynard-h 0.4
+scale Foster-h 0.4
+scale Errol-h 0.4
+rotate Fatima-h -36.6
+rotate Evonne-h -25.4
+scale Simone-h 0.4
+scale Edie-h 0.4
+scale Homer-h 0.4
+rotate Francesco-h 19.6
+scale Hector-h 0.4
+rotate Susan-h -25.6
+rotate Dwayne-h -23.1
+scale Darwin-h 0.4
+scale Gerri-h 0.4
+rotate Kimberlee-h 37.7
+scale Windy-h 0.4
+rotate Opal-h -18.5
+rotate Latasha-h 37.2
+scale Jenni-h 0.4
+rotate Roseann-h -12.2
+rotate Alfreda-h 22.3
+rotate Claude-h -44.6
+rotate Abram-h 30.0
+scale Latosha-h 0.4
+scale Claude-h 0.4
+scale Colleen-h 0.4
+rotate Janice-h 36.3
+scale Rey-h 0.4
+rotate Molly-h -30.2
+rotate Clayton-h -38.7
+rotate Martin-h -9.7
+rotate Nena-h -32.3
+rotate Stewart-h -40.3
+rotate Jung-h 11.6
+scale Julian-h 0.4
+scale Janel-h 0.4
+rotate Jeffry-h 26.8
+scale Casandra-h 0.4
+scale Dillon-h 0.4
+scale Eboni-h 0.4
+scale Alfreda-h 0.4
+rotate Foster-h -43.2
+scale Roseann-h 0.4
+rotate Trudy-h -23.0
+scale Gemma-h 0.4
+rotate Dewitt-h 38.1
+scale Jamaal-h 0.4
+scale Alda-h 0.4
+rotate Cora-h -13.1
+scale Alyson-h 0.4
+scale Theresa-h 0.4
+scale Wendell-h 0.4
+scale Susanne-h 0.4
+rotate Scottie-h 16.6
+rotate Wilber-h 11.7
+rotate Candy-h 28.8
+scale Parker-h 0.4
+scale Boyd-h 0.4
+scale Debrah-h 0.4
+rotate Roderick-h 6.6
+rotate Reuben-h -40.1
+scale Brianne-h 0.4
+rotate Tera-h 10.8
+scale Chrissy-h 0.4
+scale Millicent-h 0.4
+scale Doyle-h 0.4
+scale Brain-h 0.4
+rotate Darwin-h 32.3
+rotate Julian-h 2.2
+rotate Josefina-h -15.3
+rotate Ernesto-h -8.9
+rotate Dedra-h 12.6
+rotate Janel-h -15.4
+rotate Chrissy-h -41.5
+rotate Delmar-h -3.5
+rotate Lucretia-h -9.1
+scale Zoila-h 0.4
+rotate Brianne-h 5.1
+scale Carleen-h 0.4
+scale Laverne-h 0.4
+scale Lilly-h 0.4
+scale Roxana-h 0.4
+scale Damion-h 0.4
+scale Rodney-h 0.4
+scale Armida-h 0.4
+rotate Brett-h -30.1
+scale Jack-h 0.4
+rotate Ronald-h 42.5
+scale Tabatha-h 0.4
+scale Sheri-h 0.4
+scale Junior-h 0.4
+scale Jamel-h 0.4
+rotate Lorraine-h 22.5
+rotate Alda-h 12.0
+rotate Stacy-h 35.4
+scale Pamala-h 0.4
+rotate Mia-h 25.5
+scale Ernest-h 0.4
+scale Brant-h 0.4
+scale Jonnie-h 0.4
+rotate Victor-h -38.0
+rotate Roxana-h 14.7
+scale Angelo-h 0.4
+scale Bradly-h 0.4
+rotate Dorothea-h 9.6
+scale Tuan-h 0.4
+rotate Sharron-h -19.5
+scale Corinne-h 0.4
+scale Virgilio-h 0.4
+rotate Claudio-h 37.5
+rotate Sierra-h 22.1
+rotate Brant-h -11.8
+rotate Jamel-h -29.1
+rotate Rich-h 34.0
+scale Mari-h 0.4
+scale Tera-h 0.4
+scale Otha-h 0.4
+rotate Jamison-h -0.2
+scale Dedra-h 0.4
+scale Eddie-h 0.4
+scale Jonas-h 0.4
+scale Felecia-h 0.4
+scale Krystle-h 0.4
+rotate Reginald-h -43.5
+scale Roderick-h 0.4
+scale Candy-h 0.4
+scale Darrin-h 0.4
+rotate Melodie-h -1.6
+scale Hanna-h 0.4
+rotate Jenifer-h -13.6
+scale Rodrick-h 0.4
+rotate Tosha-h 42.1
+rotate Bryce-h -19.8
+scale Cora-h 0.4
+scale Debi-h 0.4
+rotate Daniel-h 12.7
+scale Pamela-h 0.4
+scale Karyn-h 0.4
+scale Wilber-h 0.4
+rotate Abdul-h 28.3
+rotate Sheri-h 11.6
+rotate Bettina-h 30.6
+scale Nena-h 0.4
+rotate Jonnie-h -24.1
+scale Freeman-h 0.4
+rotate Rey-h -31.3
+rotate Renita-h 12.4
+rotate Carmelita-h 2.4
+scale Dee-h 0.4
+rotate Gilda-h -19.4
+rotate Errol-h -21.0
+scale Ernesto-h 0.4
+scale Dwayne-h 0.4
+rotate Herlinda-h 26.4
+rotate Eboni-h 21.9
+rotate June-h 24.4
+scale Rebeca-h 0.4
+scale Jamison-h 0.4
+scale Chong-h 0.4
+scale Claudio-h 0.4
+rotate Ilona-h 42.4
+rotate Dillon-h -24.2
+scale Jenifer-h 0.4
+rotate Clyde-h 2.8
+rotate Ruth-h -17.6
+rotate Cordell-h 42.4
+scale Scottie-h 0.4
+scale Zona-h 0.4
+rotate Julianna-h 43.5
+rotate Harris-h -30.8
+rotate Hanna-h -38.1
+rotate Domingo-h 40.5
+scale Cordell-h 0.4
+rotate Laverne-h 25.7
+rotate Heath-h -31.7
+rotate Kathi-h -38.5
+rotate Parker-h 43.6
+rotate Luther-h 7.1
+scale Rosanne-h 0.4
+scale Marylin-h 0.4
+scale Mia-h 0.4
+scale Clayton-h 0.4
+scale Erich-h 0.4
+scale Zachery-h 0.4
+scale Abram-h 0.4
+scale Eloise-h 0.4
+scale Davis-h 0.4
+scale Herlinda-h 0.4
+scale Opal-h 0.4
+rotate Jack-h -40.3
+rotate Wally-h 16.9
+scale Sharron-h 0.4
+rotate Henry-h 16.9
+scale Katie-h 0.4
+rotate Leta-h -18.7
+rotate Sallie-h -10.5
+rotate Adelaide-h 35.0
+scale Randy-h 0.4
+scale Wilford-h 0.4
+rotate Lucy-h -33.3
+rotate Shellie-h 30.5
+scale Norris-h 0.4
+rotate Junior-h -24.4
+rotate Virgilio-h -35.7
+rotate Francesca-h 41.1
+rotate Kisha-h -30.2
+scale Molly-h 0.4
+rotate Stan-h 27.7
+scale Isabell-h 0.4
+scale Carmelita-h 0.4
+rotate Maude-h -38.7
+rotate Elvis-h -32.6
+rotate Angelo-h -7.5
+scale Cecelia-h 0.4
+scale Jung-h 0.4
+scale Katina-h 0.4
+rotate Kate-h 34.3
+scale Abdul-h 0.4
+scale Daniel-h 0.4
+rotate Frederic-h 2.8
+rotate Maryanne-h -26.6
+rotate Krystle-h -13.3
+scale Stephanie-h 0.4
+scale Gilda-h 0.4
+scale Shellie-h 0.4
+rotate Ethan-h -35.2
+rotate Theresa-h 34.2
+rotate Belinda-h -38.3
+scale Lindsey-h 0.4
+scale Elena-h 0.4
+scale Stephany-h 0.4
+rotate Barrett-h -5.4
+scale Latasha-h 0.4
+scale Stacy-h 0.4
+rotate Stephanie-h -0.4
+scale Wally-h 0.4
+rotate Nicola-h 35.1
+rotate Doyle-h 36.6
+rotate Chong-h 7.6
+rotate Rodney-h 20.9
+scale Ruth-h 0.4
+scale Ashleigh-h 0.4
+scale Tyrone-h 0.4
+scale Nicola-h 0.4
+rotate Pamala-h 16.8
+scale Reginald-h 0.4
+scale Andrew-h 0.4
+rotate Elisha-h -39.2
+scale Elden-h 0.4
+rotate Felipe-h -39.3
+rotate Andrew-h -28.8
+rotate Zackary-h 3.6
+rotate Stella-h -33.7
+rotate Jamaal-h 38.8
+rotate Gemma-h 33.3
+scale Stewart-h 0.4
+scale Martin-h 0.4
+rotate Debrah-h -29.7
+rotate Otha-h -26.6
+scale Barrett-h 0.4
+rotate Pamela-h -27.2
+rotate Erich-h 1.9
+scale Evonne-h 0.4
+scale Heath-h 0.4
+rotate Ernest-h -24.7
+scale Brett-h 0.4
+scale Alphonse-h 0.4
+rotate Jae-h 23.4
+rotate Lindsey-h -2.0
+scale Janice-h 0.4
+rotate Carleen-h 29.8
+scale Kisha-h 0.4
+rotate Millicent-h -38.3
+rotate Homer-h -18.4
+scale Tosha-h 0.4
+scale Valentina-h 0.4
+scale Guadalupe-h 0.4
+scale Cathrine-h 0.4
+scale Dewitt-h 0.4
+scale Morgan-h 0.4
+rotate Venus-h 24.3
+scale Henry-h 0.4
+rotate Carolyn-h -24.4
+rotate Tami-h 1.2
+rotate Hector-h -12.7
+rotate Marylin-h 44.9
+scale Clyde-h 0.4
+scale Kate-h 0.4
+scale Luther-h 0.4
+scale Trey-h 0.4
+rotate Katina-h -20.0
+scale Elisha-h 0.4
+scale Edward-h 0.4
+scale Adelaide-h 0.4
+rotate Zoila-h -13.5
+rotate Noble-h 16.6
+rotate Rodrick-h 2.3
+rotate Norris-h 23.4
+scale Victor-h 0.4
+scale Kathi-h 0.4
+rotate Ashleigh-h 45.0
+rotate Casandra-h 12.6
+scale Bryce-h 0.4
+scale Sierra-h 0.4
+rotate Carmelo-h 20.9
+rotate Toya-h 33.6
+scale Sallie-h 0.4
+scale Maryanne-h 0.4
+scale Francesca-h 0.4
+scale Eloisa-h 0.4
+scale Lorraine-h 0.4
+rotate Sheree-h 26.9
+rotate Cecelia-h 28.8
+rotate Lola-h 29.7
+scale Lucy-h 0.4
+rotate Colleen-h -30.3
+scale Mallory-h 0.4
+rotate Tabatha-h -19.7
+rotate Lilly-h -6.1
+rotate Rosanne-h 38.9
+scale Renita-h 0.4
+rotate Davis-h -22.7
+scale Jeffry-h 0.4
+rotate Mari-h -17.3
+scale Stella-h 0.4
+rotate Jonas-h 1.1
+rotate Bradly-h -11.2
+scale Carolyn-h 0.4
+scale Zackary-h 0.4
+scale Kermit-h 0.4
+scale Stan-h 0.4
+scale Sheree-h 0.4
+scale May-h 0.4
+rotate Marquita-h -30.9
+scale Keisha-h 0.4
+scale Maritza-h 0.4
+rotate Isabell-h 38.3
+scale Tami-h 0.4
+scale Ruthann-h 0.4
+rotate Alphonse-h 6.9
+rotate Ruthann-h -41.8
+scale Forrest-h 0.4
+rotate Freeman-h -5.4
+rotate Gerri-h 23.0
+scale Carmelo-h 0.4
+rotate Maritza-h 23.2
+rotate Elena-h 4.9
+rotate Forrest-h -9.5
+rotate Windy-h 19.9
+rotate Miranda-h 44.3
+scale June-h 0.4
+rotate Keisha-h 1.0
+scale Peter-h 0.4
+rotate Benito-h 22.3
+scale Miranda-h 0.4
+rotate Debi-h -27.7
+scale Frederic-h 0.4
+scale Fatima-h 0.4
+rotate Tasha-h 43.1
+rotate Damion-h -24.9
+rotate Maynard-h 18.1
+rotate Avis-h -37.3
+rotate Theron-h 8.5
+rotate Eloise-h 14.1
+scale Helene-h 0.4
+rotate Rebeca-h 37.0
+rotate Alyson-h 31.6
+rotate Corinne-h 21.5
+scale Venus-h 0.4
+rotate Eloisa-h 14.2
+scale Trudy-h 0.4
+scale Benito-h 0.4
+scale Mitch-h 0.4
+scale Leta-h 0.4
+rotate Latosha-h 15.0
+rotate Karyn-h 12.2
+scale Melodie-h 0.4
+translate Kimberlee-h 1500.0 1410.0
+translate Nena-b 750.0 1500.0
+translate Renita-h 1000.0 2410.0
+translate Venus-b 1250.0 5500.0
+translate Zona-b 5000.0 2000.0
+translate Roxana-h 1500.0 4410.0
+translate Gemma-b 5750.0 2500.0
+translate Pamela-h 250.0 2910.0
+translate Cora-h 2500.0 2410.0
+translate Josefina-b 2500.0 5000.0
+translate Alfreda-b 6000.0 6000.0
+translate Chrissy-b 2250.0 5500.0
+translate Krystle-b 1500.0 0.0
+translate Julian-h 1250.0 2910.0
+translate Tricia-b 250.0 3500.0
+translate Belinda-b 7000.0 4000.0
+translate Casandra-b 5000.0 0.0
+translate Ethan-b 500.0 6000.0
+translate Deshawn-h 3500.0 5410.0
+translate Clyde-b 2000.0 5000.0
+translate Melodie-h 3000.0 5410.0
+translate Debi-b 1750.0 3500.0
+translate Tabatha-b 3500.0 2000.0
+translate Roderick-h 5000.0 5410.0
+translate Domingo-b 4500.0 3000.0
+translate Parker-b 4000.0 2000.0
+translate Herlinda-h 4500.0 1410.0
+translate Tuan-h 2250.0 3910.0
+translate Krystle-h 1500.0 410.0
+translate Roseann-b 0.0 6000.0
+translate Brant-b 4250.0 4500.0
+translate Helene-h 2750.0 4910.0
+translate Dorothea-h 500.0 2410.0
+translate Lindsey-b 0.0 5000.0
+translate Susan-h 3250.0 5910.0
+translate Tami-b 1000.0 0.0
+translate Ernest-b 3500.0 4000.0
+translate Ali-h 1250.0 6910.0
+translate Sallie-h 4250.0 3910.0
+translate Laverne-h 3750.0 2910.0
+translate Cecelia-b 5250.0 4500.0
+translate Tosha-b 4500.0 7000.0
+translate Zena-b 5250.0 1500.0
+translate Mia-b 0.0 1000.0
+translate Debi-h 1750.0 3910.0
+translate Fatima-h 5000.0 1410.0
+translate Dorothea-b 500.0 2000.0
+translate Forrest-b 250.0 500.0
+translate Francesco-b 500.0 1000.0
+translate Clyde-h 2000.0 5410.0
+translate Sharron-b 1000.0 7000.0
+translate Jenifer-h 1500.0 5410.0
+translate Debrah-h 3750.0 6910.0
+translate Susanne-h 5750.0 910.0
+translate Dewitt-b 5500.0 4000.0
+translate Edie-b 7250.0 2500.0
+translate Dedra-b 2750.0 1500.0
+translate Janice-b 6750.0 3500.0
+translate Dillon-h 7250.0 3910.0
+translate Jonas-h 2000.0 4410.0
+translate Stella-h 4750.0 910.0
+translate Zoila-h 2750.0 6910.0
+translate Dewitt-h 5500.0 4410.0
+translate Rey-b 4000.0 7000.0
+translate Trey-h 1500.0 2410.0
+translate Carleen-b 6500.0 2000.0
+translate Fatima-b 5000.0 1000.0
+translate Homer-b 1250.0 1500.0
+translate Maynard-h 7000.0 2410.0
+translate Alyson-h 2250.0 1910.0
+translate Sierra-b 4500.0 2000.0
+translate Kisha-b 4750.0 1500.0
+translate Jae-b 4250.0 1500.0
+translate Janel-h 7000.0 3410.0
+translate Victor-h 5250.0 2910.0
+translate Jonas-b 2000.0 4000.0
+translate Gerri-b 5250.0 5500.0
+translate Eddie-h 3750.0 3910.0
+translate Brianne-h 3750.0 5910.0
+translate Ashleigh-b 5000.0 7000.0
+translate Dwayne-b 500.0 3000.0
+translate Toya-h 6750.0 1910.0
+translate Simone-b 1750.0 6500.0
+translate Maritza-h 6250.0 3910.0
+translate Jamaal-b 2000.0 7000.0
+translate Eloise-h 4750.0 6910.0
+translate Elvis-b 750.0 3500.0
+translate Jung-b 250.0 5500.0
+translate Foster-h 1500.0 6410.0
+translate Carmelo-b 4500.0 6000.0
+translate Errol-h 2000.0 2410.0
+translate Tasha-h 6750.0 2910.0
+translate Henry-b 2750.0 2500.0
+translate Katie-b 1000.0 6000.0
+translate Frederic-h 6000.0 3410.0
+translate Maritza-b 6250.0 3500.0
+translate Scottie-h 3000.0 4410.0
+translate Cathrine-h 7000.0 410.0
+translate Guadalupe-h 2000.0 1410.0
+translate Mitch-b 6250.0 500.0
+translate Elden-h 3750.0 4910.0
+translate Herlinda-b 4500.0 1000.0
+translate Mari-h 3500.0 3410.0
+translate Armida-b 0.0 3000.0
+translate Lola-b 6500.0 6000.0
+translate Jamison-b 6500.0 5000.0
+translate Anita-b 5750.0 1500.0
+translate Kimberlee-b 1500.0 1000.0
+translate Trudy-b 4250.0 6500.0
+translate Bryce-b 7000.0 7000.0
+translate Hector-h 6000.0 410.0
+translate Gemma-h 5750.0 2910.0
+translate Rich-h 6250.0 5910.0
+translate Angelo-b 3500.0 6000.0
+translate Domingo-h 4500.0 3410.0
+translate Eloisa-h 3000.0 1410.0
+translate Norris-h 5250.0 910.0
+translate Harris-b 5250.0 6500.0
+translate Henry-h 2750.0 2910.0
+translate Jonnie-b 4250.0 5500.0
+translate Opal-b 4000.0 5000.0
+translate Barrett-b 2750.0 3500.0
+translate Ilona-b 7250.0 6500.0
+translate Jeffry-b 4750.0 5500.0
+translate Kermit-h 2000.0 410.0
+translate Dee-h 3250.0 910.0
+translate Cordell-b 2250.0 500.0
+translate Pamala-b 2500.0 7000.0
+translate Mallory-h 1000.0 1410.0
+translate Brain-b 250.0 6500.0
+translate Ashleigh-h 5000.0 7410.0
+translate Ruthann-h 6000.0 7410.0
+translate Stephanie-b 4000.0 1000.0
+translate Evonne-b 500.0 7000.0
+translate Colleen-b 5750.0 5500.0
+translate Bradly-b 2000.0 3000.0
+translate Susan-b 3250.0 5500.0
+translate Tuan-b 2250.0 3500.0
+translate Pamela-b 250.0 2500.0
+translate Reuben-h 5500.0 2410.0
+translate Victor-b 5250.0 2500.0
+translate Reuben-b 5500.0 2000.0
+translate Dwayne-h 500.0 3410.0
+translate Ali-b 1250.0 6500.0
+translate Carolyn-b 7250.0 1500.0
+translate Jenifer-b 1500.0 5000.0
+translate Katina-h 0.0 4410.0
+translate Laverne-b 3750.0 2500.0
+translate Mallory-b 1000.0 1000.0
+translate Helene-b 2750.0 4500.0
+translate Lorraine-b 4000.0 4000.0
+translate Francesco-h 500.0 1410.0
+translate Francesca-b 3000.0 0.0
+translate Lucy-h 750.0 5910.0
+translate Opal-h 4000.0 5410.0
+translate Valentina-h 1000.0 3410.0
+translate Venus-h 1250.0 5910.0
+translate Tera-h 3750.0 1910.0
+translate Rebeca-h 3250.0 4910.0
+translate Colleen-h 5750.0 5910.0
+translate Gerri-h 5250.0 5910.0
+translate Mitch-h 6250.0 910.0
+translate Marquita-h 750.0 4910.0
+translate Nicola-b 1750.0 4500.0
+translate Stan-b 1750.0 500.0
+translate Davis-b 7250.0 500.0
+translate Barrett-h 2750.0 3910.0
+translate Ronald-b 1250.0 3500.0
+translate Alphonse-h 6000.0 5410.0
+translate Jamel-h 4750.0 4910.0
+translate Chong-h 4000.0 6410.0
+translate Stewart-b 4750.0 3500.0
+translate Daniel-b 3750.0 500.0
+translate Marylin-b 750.0 6500.0
+translate Rosanne-b 2250.0 6500.0
+translate Rodrick-b 1750.0 2500.0
+translate Scottie-b 3000.0 4000.0
+translate Boyd-h 2250.0 4910.0
+translate Randy-b 6250.0 1500.0
+translate Gilda-h 2750.0 910.0
+translate Freeman-b 3000.0 2000.0
+translate Zona-h 5000.0 2410.0
+translate Rebeca-b 3250.0 4500.0
+translate Doyle-h 3500.0 7410.0
+translate Norris-b 5250.0 500.0
+translate Benito-h 6500.0 410.0
+translate Edie-h 7250.0 2910.0
+translate Lindsey-h 0.0 5410.0
+translate Roma-h 500.0 4410.0
+translate Jonnie-h 4250.0 5910.0
+translate Stewart-h 4750.0 3910.0
+translate Brett-h 2500.0 3410.0
+translate Edward-h 6250.0 2910.0
+translate Darrin-h 3250.0 2910.0
+translate Jeffry-h 4750.0 5910.0
+translate Wally-b 6000.0 2000.0
+translate Jack-b 5000.0 6000.0
+translate Maude-h 1750.0 1910.0
+translate Brain-h 250.0 6910.0
+translate Carmelo-h 4500.0 6410.0
+translate Latasha-h 5750.0 6910.0
+translate Sheree-h 250.0 1910.0
+translate Ilona-h 7250.0 6910.0
+translate Wilber-b 7000.0 1000.0
+translate Pamala-h 2500.0 7410.0
+translate Wilber-h 7000.0 1410.0
+translate Avis-h 1500.0 3410.0
+translate Shellie-b 1250.0 500.0
+translate Darwin-h 3250.0 1910.0
+translate Davis-h 7250.0 910.0
+translate Renita-b 1000.0 2000.0
+translate Angelo-h 3500.0 6410.0
+translate Eboni-h 6500.0 3410.0
+translate Sheri-h 6250.0 6910.0
+translate Guadalupe-b 2000.0 1000.0
+translate Tricia-h 250.0 3910.0
+translate Tyrone-h 0.0 2410.0
+translate Julianna-h 6500.0 4410.0
+translate Zachery-b 5500.0 1000.0
+translate Leta-h 1000.0 4410.0
+translate Elena-h 250.0 4910.0
+translate Molly-h 6750.0 5910.0
+translate Armida-h 0.0 3410.0
+translate Molly-b 6750.0 5500.0
+translate Alphonse-b 6000.0 5000.0
+translate Debrah-b 3750.0 6500.0
+translate Ruth-h 6000.0 4410.0
+translate Corinne-h 2500.0 1410.0
+translate Dedra-h 2750.0 1910.0
+translate Zackary-b 2250.0 2500.0
+translate Elvis-h 750.0 3910.0
+translate Elden-b 3750.0 4500.0
+translate Rich-b 6250.0 5500.0
+translate Benito-b 6500.0 0.0
+translate Marylin-h 750.0 6910.0
+translate Marquita-b 750.0 4500.0
+translate Brett-b 2500.0 3000.0
+translate Lilly-b 3500.0 1000.0
+translate Bryce-h 7000.0 7410.0
+translate Stephany-b 4500.0 5000.0
+translate Julianna-b 6500.0 4000.0
+translate Roderick-b 5000.0 5000.0
+translate Rey-h 4000.0 7410.0
+translate Latosha-b 6750.0 4500.0
+translate Kate-b 3500.0 0.0
+translate Tami-h 1000.0 410.0
+translate Felipe-h 1500.0 7410.0
+translate Zachery-h 5500.0 1410.0
+translate Adelaide-b 6750.0 6500.0
+translate Eddie-b 3750.0 3500.0
+translate Virgilio-b 4000.0 0.0
+translate Julian-b 1250.0 2500.0
+translate May-h 7250.0 5910.0
+translate Jae-h 4250.0 1910.0
+translate Maude-b 1750.0 1500.0
+translate Janel-b 7000.0 3000.0
+translate Felecia-h 4250.0 910.0
+translate Doyle-b 3500.0 7000.0
+translate Miranda-b 6250.0 4500.0
+translate Windy-b 2500.0 0.0
+translate Theresa-h 2500.0 4410.0
+translate Keisha-b 7000.0 6000.0
+translate Stacy-h 2500.0 6410.0
+translate Claudio-b 500.0 0.0
+translate Delmar-b 5000.0 4000.0
+translate Latasha-b 5750.0 6500.0
+translate Stacy-b 2500.0 6000.0
+translate Alda-h 7250.0 4910.0
+translate Lola-h 6500.0 6410.0
+translate Claude-b 5750.0 3500.0
+translate Wally-h 6000.0 2410.0
+translate Mia-h 0.0 1410.0
+translate Kisha-h 4750.0 1910.0
+translate Heath-b 3000.0 7000.0
+translate Luther-b 6000.0 1000.0
+translate Randy-h 6250.0 1910.0
+translate Wendell-b 3250.0 6500.0
+translate Rosanne-h 2250.0 6910.0
+translate Stella-b 4750.0 500.0
+translate Andrew-h 5500.0 5410.0
+translate Brant-h 4250.0 4910.0
+translate Chrissy-h 2250.0 5910.0
+translate Casandra-h 5000.0 410.0
+translate Junior-h 2750.0 5910.0
+translate Darwin-b 3250.0 1500.0
+translate Deshawn-b 3500.0 5000.0
+translate Mari-b 3500.0 3000.0
+translate Claude-h 5750.0 3910.0
+translate Jamison-h 6500.0 5410.0
+translate Josefina-h 2500.0 5410.0
+translate Lorraine-h 4000.0 4410.0
+translate Kathi-h 5500.0 3410.0
+translate Boyd-b 2250.0 4500.0
+translate Avis-b 1500.0 3000.0
+translate Janice-h 6750.0 3910.0
+translate Otha-b 5250.0 3500.0
+translate Anita-h 5750.0 1910.0
+translate Heath-h 3000.0 7410.0
+translate Roxana-b 1500.0 4000.0
+translate Candy-b 5500.0 7000.0
+translate Junior-b 2750.0 5500.0
+translate Morgan-b 2000.0 6000.0
+translate Wilford-b 4250.0 2500.0
+translate Karyn-b 750.0 500.0
+translate Carleen-h 6500.0 2410.0
+translate Edward-b 6250.0 2500.0
+translate Lucretia-h 3000.0 3410.0
+translate Cordell-h 2250.0 910.0
+translate Roma-b 500.0 4000.0
+translate Stephany-h 4500.0 5410.0
+translate Jamaal-h 2000.0 7410.0
+translate Katina-b 0.0 4000.0
+translate Trey-b 1500.0 2000.0
+translate Stephanie-h 4000.0 1410.0
+translate Harris-h 5250.0 6910.0
+translate Theron-b 5750.0 4500.0
+translate Leta-b 1000.0 4000.0
+translate Hanna-b 6500.0 7000.0
+translate Elisha-h 1750.0 5910.0
+translate Toya-b 6750.0 1500.0
+translate May-b 7250.0 5500.0
+translate Chong-b 4000.0 6000.0
+translate Stan-h 1750.0 910.0
+translate June-b 1250.0 4500.0
+translate Abram-b 6750.0 500.0
+translate Alyson-b 2250.0 1500.0
+translate Francesca-h 3000.0 410.0
+translate Sierra-h 4500.0 2410.0
+translate Jung-h 250.0 5910.0
+translate Keisha-h 7000.0 6410.0
+translate Morgan-h 2000.0 6410.0
+translate Cora-b 2500.0 2000.0
+translate Sheree-b 250.0 1500.0
+translate Nicola-h 1750.0 4910.0
+translate Kermit-b 2000.0 0.0
+translate Eboni-b 6500.0 3000.0
+translate Wendell-h 3250.0 6910.0
+translate Karyn-h 750.0 910.0
+translate Ruth-b 6000.0 4000.0
+translate Kate-h 3500.0 410.0
+translate Isabell-b 6500.0 1000.0
+translate Reginald-h 750.0 2910.0
+translate Corinne-b 2500.0 1000.0
+translate Ronald-h 1250.0 3910.0
+translate Elena-b 250.0 4500.0
+translate Hanna-h 6500.0 7410.0
+translate Evonne-h 500.0 7410.0
+translate Martin-b 5500.0 6000.0
+translate Erich-h 4500.0 4410.0
+translate Noble-h 4000.0 3410.0
+translate Freeman-h 3000.0 2410.0
+translate Belinda-h 7000.0 4410.0
+translate Zoila-b 2750.0 6500.0
+translate Kathi-b 5500.0 3000.0
+translate Virgilio-h 4000.0 410.0
+translate Bradly-h 2000.0 3410.0
+translate Miranda-h 6250.0 4910.0
+translate Abdul-b 3250.0 3500.0
+translate Theresa-b 2500.0 4000.0
+translate Damion-b 7000.0 5000.0
+translate Zena-h 5250.0 1910.0
+translate Bettina-h 0.0 410.0
+translate Ernesto-h 500.0 5410.0
+translate Jamel-b 4750.0 4500.0
+translate Alfreda-h 6000.0 6410.0
+translate Claudio-h 500.0 410.0
+translate Abdul-h 3250.0 3910.0
+translate Homer-h 1250.0 1910.0
+translate Wilford-h 4250.0 2910.0
+translate Katie-h 1000.0 6410.0
+translate Latosha-h 6750.0 4910.0
+translate Sheri-b 6250.0 6500.0
+translate Errol-b 2000.0 2000.0
+translate Zackary-h 2250.0 2910.0
+translate Sharron-h 1000.0 7410.0
+translate Nena-h 750.0 1910.0
+translate Eloise-b 4750.0 6500.0
+translate Peter-b 0.0 7000.0
+translate June-h 1250.0 4910.0
+translate Erich-b 4500.0 4000.0
+translate Brianne-b 3750.0 5500.0
+translate Isabell-h 6500.0 1410.0
+translate Carmelita-h 1000.0 5410.0
+translate Eloisa-b 3000.0 1000.0
+translate Forrest-h 250.0 910.0
+translate Foster-b 1500.0 6000.0
+translate Tera-b 3750.0 1500.0
+translate Daniel-h 3750.0 910.0
+translate Hector-b 6000.0 0.0
+translate Felecia-b 4250.0 500.0
+translate Jenni-h 3000.0 6410.0
+translate Shellie-h 1250.0 910.0
+translate Carmelita-b 1000.0 5000.0
+translate Otha-h 5250.0 3910.0
+translate Rodney-h 4500.0 410.0
+translate Melodie-b 3000.0 5000.0
+translate Rodney-b 4500.0 0.0
+translate Elisha-b 1750.0 5500.0
+translate Rodrick-h 1750.0 2910.0
+translate Dee-b 3250.0 500.0
+translate Maynard-b 7000.0 2000.0
+translate Alda-b 7250.0 4500.0
+translate Ruthann-b 6000.0 7000.0
+translate Frederic-b 6000.0 3000.0
+translate Tasha-b 6750.0 2500.0
+translate Millicent-h 4750.0 2910.0
+translate Candy-h 5500.0 7410.0
+translate Damion-h 7000.0 5410.0
+translate Tosha-h 4500.0 7410.0
+translate Jenni-b 3000.0 6000.0
+translate Simone-h 1750.0 6910.0
+translate Ethan-h 500.0 6410.0
+translate Cecelia-h 5250.0 4910.0
+translate Reginald-b 750.0 2500.0
+translate Bettina-b 0.0 0.0
+translate Noble-b 4000.0 3000.0
+translate Clayton-h 5000.0 3410.0
+translate Trudy-h 4250.0 6910.0
+translate Adelaide-h 6750.0 6910.0
+translate Clayton-b 5000.0 3000.0
+translate Sallie-b 4250.0 3500.0
+translate Delmar-h 5000.0 4410.0
+translate Darrin-b 3250.0 2500.0
+translate Lilly-h 3500.0 1410.0
+translate Parker-h 4000.0 2410.0
+translate Valentina-b 1000.0 3000.0
+translate Andrew-b 5500.0 5000.0
+translate Felipe-b 1500.0 7000.0
+translate Roseann-h 0.0 6410.0
+translate Abram-h 6750.0 910.0
+translate Theron-h 5750.0 4910.0
+translate Cathrine-b 7000.0 0.0
+translate Windy-h 2500.0 410.0
+translate Dillon-b 7250.0 3500.0
+translate Tabatha-h 3500.0 2410.0
+translate Gilda-b 2750.0 500.0
+translate Susanne-b 5750.0 500.0
+translate Ernest-h 3500.0 4410.0
+translate Millicent-b 4750.0 2500.0
+translate Tyrone-b 0.0 2000.0
+translate Peter-h 0.0 7410.0
+translate Carolyn-h 7250.0 1910.0
+translate Jack-h 5000.0 6410.0
+translate Lucy-b 750.0 5500.0
+translate Maryanne-h 5500.0 410.0
+translate Luther-h 6000.0 1410.0
+translate Ernesto-b 500.0 5000.0
+translate Lucretia-b 3000.0 3000.0
+translate Martin-h 5500.0 6410.0
+translate Maryanne-b 5500.0 0.0
+list
+save output.txt
+quit

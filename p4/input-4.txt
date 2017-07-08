@@ -1,0 +1,5 @@
+load wand line.txt
+load stone circle.txt
+load cloak triangle.txt
+list
+save output.txt

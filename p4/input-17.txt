@@ -1,0 +1,8 @@
+load nothing nope.txt
+load oops jfjfjf.txt
+load void nada.txt
+load something square.txt
+load nill jfjfjf.txt
+list
+save output.txt
+quit

@@ -1,0 +1,18 @@
+load middle circle.txt
+load north circle.txt
+load south circle.txt
+load northWest circle.txt
+load northEast circle.txt
+load southWest circle.txt
+load southEast circle.txt
+list
+translate north 0 75
+translate south 0 -75
+translate northEast 64.95 37.5
+translate southEast 64.95 -37.5
+translate northWest -64.95 37.5
+translate southWest -64.95 -37.5
+delete middle
+list
+save output.txt
+quit

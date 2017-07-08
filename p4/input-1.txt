@@ -1,0 +1,3 @@
+load m1 square.txt
+save output.txt
+quit

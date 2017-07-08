@@ -1,0 +1,7 @@
+load big-but-not-too-long circle.txt
+load model-name-that-is-too-long circle.txt
+load m file-name-that-is-longer-than-the-maximum-name-length.txt
+Nonsense-command-that-is-longer-than-all-the-valid-commands-You-want-to-make-sure-you-do-not-buffer-overflow-on-something-like-this-even-if-it-was-longer a line.txt
+list
+save output.txt
+quit

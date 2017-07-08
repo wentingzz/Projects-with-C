@@ -1,0 +1,12 @@
+list
+load s square.txt
+list
+load c circle.txt
+list
+turn s 15
+expand c 30
+translate x 35 45
+scale s larger
+rotated c 55
+save output.txt
+quit

@@ -1,0 +1,4 @@
+load l line.txt
+translate l 100.0 -50.0
+save output.txt
+quit
