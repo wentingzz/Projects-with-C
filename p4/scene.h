@@ -19,7 +19,7 @@ typedef struct {
 #endif
 Scene *makeScene();
 void freeScene( Scene *s );
-void addModel(Scene *s, Model *m);
+bool addModel(Scene *s, Model *m);
 void deleteModel(Scene *s, char const *name);
 void saveScene( Scene *s, char const *fname );
 bool applyToScene( Scene *s, char const *name, 
