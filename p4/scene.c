@@ -41,7 +41,7 @@ void freeScene( Scene *s )
   free(s);
 }
 
-void addModel(Scene *s, Model *m)
+bool addModel(Scene *s, Model *m)
 {
   if (s->mCount >= s->mCap - 1){
     s->mCap += CAP;
@@ -53,12 +53,16 @@ void addModel(Scene *s, Model *m)
       idx = i;
       break;
     }
+    if(!strcmp(m->name, s->mList[i]->name)){
+      return false;
+    }
   }
   for (int i = s->mCount - 1; i >= idx; i--){
     s->mList[i + 1] = s->mList[i];
   }
   s->mList[idx] = m;
   (s->mCount)++;
+  return true;
 }
 
 void deleteModel(Scene *s, char const *name)
@@ -107,6 +111,7 @@ void (*f)( double pt[ 2 ], double a, double b ), double a, double b )
   for (int i = 0; i < s->mCount; i++){
     if (strcmp(s->mList[i]->name, name) == 0){
       applyToModel( s->mList[i], f, a, b);
+      return true;
     }
   }
   return false;

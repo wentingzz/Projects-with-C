@@ -10,7 +10,7 @@
 #include <math.h>
 #include "model.h"
 
-#define RADIAN 0.0174533
+#define RADIAN M_PI / 180
 #define CAP 10
 
 /**
@@ -69,19 +69,22 @@ void freeModel( Model *m )
 
 void scaleModel(double pt[ 2 ], double a, double b)
 {
+//   printf("%lf %lf\n", pt[0], pt[1]);
   pt[0] *= a;
   pt[1] *= a;
+//   printf("%lf %lf\n", pt[0], pt[1]);
 }
 
 void translateModel(double pt[ 2 ], double a, double b)
 {
   pt[0] += a;
   pt[1] += b;
+//   printf("%lf %lf\n", pt[0], pt[1]);
 }
 
 void rotateModel(double pt[ 2 ], double a, double b)
 {
-  int x = pt[0];
+  double x = pt[0];
   double co = cos(a * RADIAN);
   double si = sin(a * RADIAN);
   pt[0] = pt[0] * co - pt[1] * si;

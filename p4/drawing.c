@@ -38,50 +38,49 @@ int main()
           m = loadModel(fname);
           if (m){
             strcpy(m->name, name);
-            addModel(s, m);
-//             if (s->mCount >= s->mCap - 1){
-//               s->mCap += 10;
-//               s->mList = (Model **)realloc(s->mList, s->mCap * sizeof(Model*));
-//             }
-//             int idx = s->mCount;
-//             for (int i = 0; i < s->mCount; i++){
-//               if (strncmp(m->name, s->mList[i]->name, 20) < 0){
-//                 idx = i;
-//                 break;
-//               }
-//             }
-//             for (int i = s->mCount - 1; i >= idx; i--){
-//               s->mList[i + 1] = s->mList[i];
-//             }
-//             s->mList[idx] = m;
-//             (s->mCount)++;
+            if (!addModel(s, m)) {
+              fprintf(stderr, "Command %d invalid\n", cmd);
+            }
           }
+      } else {
+        fprintf(stderr, "Command %d invalid\n", cmd);
       }
     } else if (strcmp(choice, "translate") == 0) {
       double x, y;
-      if (scanf("%20s %lf %lf\n", name, &x, &y) == 3){
-        applyToScene(s, name, translateModel, x, y);
+      if (scanf("%20s %lf %lf", name, &x, &y) == 3){
+        if (!applyToScene(s, name, translateModel, x, y)) {
+          fprintf(stderr, "Command %d invalid\n", cmd);
+        }
       }
     } else if (strcmp(choice, "rotate") == 0) {
       double degree;
-      if (scanf("%20s %lf\n", name, &degree) == 2){
-        applyToScene(s, name, rotateModel, degree, 0);
+      if (scanf("%20s %lf", name, &degree) == 2){
+        if (!applyToScene(s, name, rotateModel, degree, 0)) {
+          fprintf(stderr, "Command %d invalid\n", cmd);
+        }
       }
     } else if (strcmp(choice, "scale") == 0) {
       double factor;
-      scanf("%20s %lf\n", name, &factor);
-      applyToScene(s, name, scaleModel, factor, 0);
+      if (scanf("%20s %lf", name, &factor) == 2) {
+        if (!applyToScene(s, name, scaleModel, factor, 0)) {
+          fprintf(stderr, "Command %d invalid\n", cmd);
+        }
+      }
     } else if (strcmp(choice, "list") == 0) {
       for (int i = 0; i < s->mCount; i++){
         printf("%s %s (%d)\n", s->mList[i]->name, s->mList[i]->fname, s->mList[i]->pCount / 2);
       }
     } else if (strcmp(choice, "delete") == 0) {
-      if (scanf("%20s\n", name)){
+      if (scanf("%20s", name)){
         deleteModel(s, name);
+      } else {
+        fprintf(stderr, "Command %d invalid\n", cmd);
       }
     } else if (strcmp(choice, "save") == 0) {
-      if (scanf("%20s\n", name)) {
+      if (scanf("%20s", name)) {
         saveScene(s, name);
+      } else {
+        fprintf(stderr, "Command %d invalid\n", cmd);
       }
     } else if (strcmp(choice, "quit") == 0) {
       freeScene(s);
