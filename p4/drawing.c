@@ -27,15 +27,16 @@ int main()
   char name[NAME_LIMIT + 1];
   Scene *s;
   Model *m;
+
   while (scanf("%9s", choice) == 1){
     if (cmd == 1){
       s = makeScene();
     }
-
+    
     if (strcmp(choice, "load") == 0){
       char fname[NAME_LIMIT + 1];
-      if (scanf("%20s %20s", name, fname) == 2) {
-          m = loadModel(fname);
+      if(scanf("%20s", name) && getchar() == ' ' && scanf("%20s", fname) && getchar() == '\n'){
+        m = loadModel(fname);
           if (m){
             strcpy(m->name, name);
             if (!addModel(s, m)) {
@@ -44,6 +45,7 @@ int main()
           }
       } else {
         fprintf(stderr, "Command %d invalid\n", cmd);
+        scanf("%*[^\n]s");
       }
     } else if (strcmp(choice, "translate") == 0) {
       double x, y;
@@ -51,6 +53,9 @@ int main()
         if (!applyToScene(s, name, translateModel, x, y)) {
           fprintf(stderr, "Command %d invalid\n", cmd);
         }
+      } else {
+        fprintf(stderr, "Command %d invalid\n", cmd);
+        scanf("%*[^\n]s");
       }
     } else if (strcmp(choice, "rotate") == 0) {
       double degree;
@@ -58,6 +63,9 @@ int main()
         if (!applyToScene(s, name, rotateModel, degree, 0)) {
           fprintf(stderr, "Command %d invalid\n", cmd);
         }
+      } else {
+        fprintf(stderr, "Command %d invalid\n", cmd);
+        scanf("%*[^\n]s");
       }
     } else if (strcmp(choice, "scale") == 0) {
       double factor;
@@ -65,6 +73,9 @@ int main()
         if (!applyToScene(s, name, scaleModel, factor, 0)) {
           fprintf(stderr, "Command %d invalid\n", cmd);
         }
+      } else {
+        fprintf(stderr, "Command %d invalid\n", cmd);
+        scanf("%*[^\n]s");
       }
     } else if (strcmp(choice, "list") == 0) {
       for (int i = 0; i < s->mCount; i++){
@@ -72,12 +83,14 @@ int main()
       }
     } else if (strcmp(choice, "delete") == 0) {
       if (scanf("%20s", name)){
-        deleteModel(s, name);
+        if (!deleteModel(s, name)) {
+          fprintf(stderr, "Command %d invalid\n", cmd);
+        }
       } else {
         fprintf(stderr, "Command %d invalid\n", cmd);
       }
     } else if (strcmp(choice, "save") == 0) {
-      if (scanf("%20s", name)) {
+      if (scanf("%20s", name) == 1) {
         saveScene(s, name);
       } else {
         fprintf(stderr, "Command %d invalid\n", cmd);
@@ -86,6 +99,7 @@ int main()
       freeScene(s);
       break;
     } else { //invalid input
+      fprintf(stderr, "Command %d invalid\n", cmd);
       scanf("%*[^\n]s");
     }
     printf("cmd %d> ", ++cmd);
