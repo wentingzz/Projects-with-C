@@ -10,6 +10,7 @@
 #include "scene.h"
 #include "model.h"
 
+
 #define CAP 10
 
 /**
@@ -65,7 +66,7 @@ bool addModel(Scene *s, Model *m)
   return true;
 }
 
-void deleteModel(Scene *s, char const *name)
+bool deleteModel(Scene *s, char const *name)
 {
   int idx = -1;
   for (int i = 0; i < s->mCount; i++){
@@ -80,13 +81,16 @@ void deleteModel(Scene *s, char const *name)
       s->mList[i] = s->mList[i + 1];
     }
     s->mCount--;
+    return true;
+  } else {
+    return false;
   }
 }
 void saveScene( Scene *s, char const *fname)
 {
   FILE *fp = fopen(fname, "w");
   if (!fp){
-    fprintf(stderr, "Can't open file: %s", fname);
+    fprintf(stderr, "Can't open file: %s\n", fname);
   }
   
   for (int i = 0; i < s->mCount; i++){
