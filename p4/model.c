@@ -10,7 +10,6 @@
 #include <math.h>
 #include "model.h"
 
-#define RADIAN M_PI / 180
 #define CAP 10
 
 /**
@@ -85,8 +84,8 @@ void translateModel(double pt[ 2 ], double a, double b)
 void rotateModel(double pt[ 2 ], double a, double b)
 {
   double x = pt[0];
-  double co = cos(a * RADIAN);
-  double si = sin(a * RADIAN);
+  double co = cos(a * M_PI / 180);
+  double si = sin(a * M_PI / 180);
   pt[0] = pt[0] * co - pt[1] * si;
   pt[1] = x * si + pt[1] * co;
 }
