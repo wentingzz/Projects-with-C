@@ -78,6 +78,10 @@ int main()
         scanf("%*[^\n]s");
       }
     } else if (strcmp(choice, "list") == 0) {
+      if(getchar() != '\n'){
+        fprintf(stderr, "Command %d invalid\n", cmd);
+        scanf("%*[^\n]s");
+      }
       for (int i = 0; i < s->mCount; i++){
         printf("%s %s (%d)\n", s->mList[i]->name, s->mList[i]->fname, s->mList[i]->pCount / 2);
       }
