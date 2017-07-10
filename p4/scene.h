@@ -22,5 +22,5 @@ void freeScene( Scene *s );
 bool addModel(Scene *s, Model *m);
 bool deleteModel(Scene *s, char const *name);
 void saveScene( Scene *s, char const *fname );
-bool applyToScene( Scene *s, char const *name, 
+bool applyToScene( Scene *s, char const *name,
 void (*f)( double pt[ 2 ], double a, double b ), double a, double b );

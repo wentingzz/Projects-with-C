@@ -41,7 +41,7 @@ Model *loadModel( char const *fname )
   
   //(pList + pCount)[0]
   while (fscanf(fp, "%lf %lf\n%lf %lf\n", &pList[pCount][0],
-  &pList[pCount][1],  &pList[pCount + 1][0], &pList[pCount + 1][1]) == 4){
+  &pList[pCount][1],  &pList[pCount + 1][0], &pList[pCount + 1][1]) == FOUR_VARIABLE){
     pCount += 2;
     if (pCount >= cap){
       cap *= 2;

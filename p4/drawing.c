@@ -2,7 +2,7 @@
   @file drawing.c
   @author Wenting Zheng (wzheng8)
   
-  This program is to load five models from files, modify them and save them to 
+  This program is to load five models from files, modify them and save them to
   the scene to the output file
 */
 #include <stdio.h>
@@ -81,7 +81,7 @@ int main()
         goto invalid;
       }
     } else if (strcmp(choice, "list") == 0) {
-      if(getchar() != '\n'){
+      if (getchar() != '\n'){
         goto invalid;
       }
       for (int i = 0; i < s->mCount; i++){
