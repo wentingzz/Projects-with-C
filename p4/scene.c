@@ -42,6 +42,13 @@ void freeScene( Scene *s )
   free(s);
 }
 
+/**
+  This function is to add a model to the scene
+  
+  @param s dynamically allocated memory used to store the given Scene
+  @param m model to be added to the scene
+  @return true if the model is added and false if not
+*/
 bool addModel(Scene *s, Model *m)
 {
   if (s->mCount >= s->mCap - 1){
@@ -54,7 +61,7 @@ bool addModel(Scene *s, Model *m)
       idx = i;
       break;
     }
-    if(!strcmp(m->name, s->mList[i]->name)){
+    if (!strcmp(m->name, s->mList[i]->name)){
       return false;
     }
   }
@@ -66,6 +73,13 @@ bool addModel(Scene *s, Model *m)
   return true;
 }
 
+/**
+  This function is to add a model to the scene
+  
+  @param s dynamically allocated memory used to store the given Scene
+  @param name of the model to be deleted from the scene
+  @return true if the model is deleted and false if it is not in the scene
+*/
 bool deleteModel(Scene *s, char const *name)
 {
   int idx = -1;
@@ -86,6 +100,13 @@ bool deleteModel(Scene *s, char const *name)
     return false;
   }
 }
+
+/**
+  This function is to save the scene to a file
+  
+  @param s dynamically allocated memory used to store the given Scene
+  @param fname name of the file to save the scene
+*/
 void saveScene( Scene *s, char const *fname)
 {
   FILE *fp = fopen(fname, "w");
@@ -107,7 +128,12 @@ void saveScene( Scene *s, char const *fname)
   This function is to find the model in the list of models matching the given name
   and uses the given function to apply a transfor mation to the model
   
-  @param m dynamically allocated memory used to store the given Model
+  @param s dynamically allocated memory used to store the given Scene
+  @param name of the modle
+  @param f function accepts point to transfor m, a and b are given by applyToScene()
+  @param a degree/factor/x displacement
+  @param b y displacement or 0
+  @return true if the modle is found in the scene false if not
 */
 bool applyToScene( Scene *s, char const *name,
 void (*f)( double pt[ 2 ], double a, double b ), double a, double b )

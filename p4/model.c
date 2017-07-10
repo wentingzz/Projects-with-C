@@ -2,7 +2,7 @@
   @file model.c
   @author Wenting Zheng (wzheng8)
   
-  This program is to load five models from files, save the scene to the output file
+  This program is to load, free, and transform model in the scene
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,8 +10,14 @@
 #include <math.h>
 #include "model.h"
 
+/** degree to radian*/
 #define RADIAN 3.14159265358979323846 / 180
+
+/** initial capacity of model list*/
 #define CAP 10
+
+/** four variable to read from the file*/
+#define FOUR_VARIABLE 4
 
 /**
   This function is to read a model from a file with the given name and
@@ -67,21 +73,39 @@ void freeModel( Model *m )
   free(m);
 }
 
+/**
+  This function is to make a line larger or smaller
+  
+  @param pt two endpoints of a line
+  @param a factor
+  @param b parameter never used
+*/
 void scaleModel(double pt[ 2 ], double a, double b)
 {
-//   printf("%lf %lf\n", pt[0], pt[1]);
   pt[0] *= a;
   pt[1] *= a;
-//   printf("%lf %lf\n", pt[0], pt[1]);
 }
 
+/**
+  This function is to move one line by x and y displacement
+  
+  @param pt two endpoints of a line
+  @param a x displacement
+  @param b y displacement
+*/
 void translateModel(double pt[ 2 ], double a, double b)
 {
   pt[0] += a;
   pt[1] += b;
-//   printf("%lf %lf\n", pt[0], pt[1]);
 }
 
+/**
+  This function is to rotate one line
+  
+  @param pt two endpoints of a line
+  @param a degree
+  @param b parameter never used
+*/
 void rotateModel(double pt[ 2 ], double a, double b)
 {
   double x = pt[0];
@@ -96,8 +120,8 @@ void rotateModel(double pt[ 2 ], double a, double b)
   
   @param m selected model
   @param f function accepts point to transfor m, a and b are given by applyToScene()
-  @param m dynamically allocated memory used to store the given Model
-  @param m dynamically allocated memory used to store the given Model
+  @param a degree/factor/x displacement
+  @param b y displacement or 0
 */
 void applyToModel( Model *m, void (*f)( double pt[ 2 ], double a, double b ), double a, double b )
 {
