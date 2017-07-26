@@ -12,7 +12,6 @@ int main(int argc, char *argv[])
     return 1;
   }
   FILE * input = fopen(argv[1], "rb");
-  FILE * out = fopen(argv[2], "w");
   if (!input){
     fprintf(stderr, "%s: No such file or directory\n", argv[1]);
     fclose(input);
@@ -20,6 +19,7 @@ int main(int argc, char *argv[])
     return 1;
   }
   
+  FILE * out = fopen(argv[2], "w");
   if (!out) {
     fprintf(stderr, "%s: No such file or directory\n", argv[2]);
     fclose(input);
