@@ -13,8 +13,7 @@ int main(int argc, char *argv[])
   }
   FILE * input = fopen(argv[1], "rb");
   FILE * out = fopen(argv[2], "w");
-  if (
-!input){
+  if (!input){
     fprintf(stderr, "%s: No such file or directory\n", argv[1]);
     fclose(input);
     fclose(out);

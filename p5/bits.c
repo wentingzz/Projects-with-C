@@ -1,6 +1,6 @@
 /**
   @file bits.c
-  @author Wenting Zheng(wzhengBITS_MAX)
+  @author Wenting Zheng(wzheng8)
   
   This program defines functions for writing out bit sequences to and from a file.
   It is to read and write the bit codes needed for encryption/decryption.
@@ -71,7 +71,7 @@ int getLength(int bin, int len)
   int length = -1;
 //   int tem = bin;
   while (len){
-    while ((bin & 0x03) == 0){
+    if ((bin & 0x03) == 0){
       length = len;
     }
     bin = bin >> 1;
