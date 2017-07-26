@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "code.h"
+#include "codes.h"
 #include "bits.h"
 
 int main(int argc, char* argv[])
@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
     fprintf(stderr, "usage: encrypt <infile> <outfile>\n");
     return 1;
   }
+  
   FILE * input = fopen(argv[1], "r");
   FILE * out = fopen(argv[2], "wb");
   if(!input || !out){
@@ -19,6 +20,7 @@ int main(int argc, char* argv[])
     fclose(out);
     return -1;
   }
+  
   unsigned int ch;
   int de;
   BitBuffer * bb = malloc(sizeof(BitBuffer));

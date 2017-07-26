@@ -1,7 +1,7 @@
 /** Helpful program to report the value in every byte of stdin, in binary. */
 #include <stdio.h>
 #include <stdlib.h>
-#include "code.h"
+#include "codes.h"
 #include "bits.h"
 
 int main(int argc, char *argv[])
