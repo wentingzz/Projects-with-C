@@ -10,9 +10,9 @@
 #include <stdio.h>
 
 
-/** 
- Given the ASCII code for a character, this function returns the code used to represent it. 
- For example, if you call symToCode( 'A' ), it should return 0x2C. 
+/**
+ Given the ASCII code for a character, this function returns the code used to represent it.
+ For example, if you call symToCode( 'A' ), it should return 0x2C.
  If there's no code to represent the given character, this function returns -1.
  */
 int symToCode( unsigned char ch );

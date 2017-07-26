@@ -1,15 +1,18 @@
-/** 
+/**
   @file bits.c
-  @author Wenting Zheng(wzheng8)
+  @author Wenting Zheng(wzhengBITS_MAX)
   
-  This program defines functions for writing out bit sequences to and from a file. 
-  It is to read and write the bit codes needed for encryption/decryption. 
+  This program defines functions for writing out bit sequences to and from a file.
+  It is to read and write the bit codes needed for encryption/decryption.
 */
 #include <stdio.h>
 #include "bits.h"
 
+#define BITS_MAX 8
+#define MAS_LENGTH 13
+
 /** Write the code stored in the code parameter.  Temporarily
-    store bits in the given buffer until we have 8 of them and can
+    store bits in the given buffer until we have BITS_MAX of them and can
     write them to the file.
     @param code to write out
     @param nbits number of bits in code
@@ -20,21 +23,21 @@
 */
 void writeBits( int code, int nbits, BitBuffer *buffer, FILE *fp )
 {
-  int mask[13] = {0x00, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF, 0x1FF, 
+  int mask[MAS_LENGTH] = {0x00, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF, 0x1FF,
   0x3FF, 0x7FF, 0xFFF};
-  if (buffer->bcount + nbits >= 8){
-    buffer->bits = buffer->bits << (8 - buffer->bcount);
+  if (buffer->bcount + nbits >= BITS_MAX){
+    buffer->bits = buffer->bits << (BITS_MAX - buffer->bcount);
     
-    int ctem = nbits + buffer->bcount - 8;
+    int ctem = nbits + buffer->bcount - BITS_MAX;
     int tem;
     tem = code & mask[ctem]; //left-over element
-    code = code >> (nbits + buffer->bcount - 8);
+    code = code >> (nbits + buffer->bcount - BITS_MAX);
     code = code | buffer->bits;
     fwrite(&code, 1, 1, fp);
-    if(ctem >= 8){
-      code = tem >> (ctem - 8);
+    if (ctem >= BITS_MAX){
+      code = tem >> (ctem - BITS_MAX);
       fwrite(&code, 1, 1, fp);
-      buffer->bcount = ctem - 8;
+      buffer->bcount = ctem - BITS_MAX;
       buffer->bits = tem & mask[buffer->bcount];
     } else {
       buffer->bits = tem;
@@ -47,9 +50,6 @@ void writeBits( int code, int nbits, BitBuffer *buffer, FILE *fp )
   }
 }
 
-/* 
-*/
-
 /** If there are any bits buffered in buffer, write them out to the
     given file in the high-order bit positions of a byte, leaving zeros
     in the low-order bits.
@@ -61,7 +61,7 @@ void writeBits( int code, int nbits, BitBuffer *buffer, FILE *fp )
 void flushBits( BitBuffer *buffer, FILE *fp )
 {
   if (buffer->bcount != 0) {
-    buffer->bits = buffer->bits << (8 - buffer->bcount);
+    buffer->bits = buffer->bits << (BITS_MAX - buffer->bcount);
     fwrite(&(buffer->bits), 1, 1, fp);
   }
 }
@@ -70,8 +70,8 @@ int getLength(int bin, int len)
 {
   int length = -1;
 //   int tem = bin;
-  while(len){
-    if((bin & 0x03) == 0){
+  while (len){
+    while ((bin & 0x03) == 0){
       length = len;
     }
     bin = bin >> 1;
@@ -83,8 +83,8 @@ int getLength(int bin, int len)
 /** Reads and returns the next valid code from the given file. Each valid code 
     starts with a 1 and ends with two consecutive 0s (00).
     if no bits or only 0s have been read when the end of file is reached,
-    -1 is returned. 
-    If the first bit read is a 1 and the end of file is reached before 
+    -1 is returned.
+    If the first bit read is a 1 and the end of file is reached before
     two consecutive 0s (00) are read, -2 is returned.
     If the first bit read is a 0 and a 1 is read before the end of the file
     is reached, -2 is returned.
@@ -96,7 +96,6 @@ int getLength(int bin, int len)
     @return value of the valid code read in, -1 if we reach the
     end-of-file under valid conditions, and -2 if the file is invalid.
 */
-
 int readBits (BitBuffer *buffer, FILE *fp )
 {
   if (buffer->bcount > 1 && buffer->bits == 0) {
@@ -104,9 +103,9 @@ int readBits (BitBuffer *buffer, FILE *fp )
   }
   int len;
   int tem = buffer->bits;
-  int mask[13] = {0x00, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF, 0x1FF, 
+  int mask[MAS_LENGTH] = {0x00, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF, 0x1FF, 
   0x3FF, 0x7FF, 0xFFF};
-  
+
   if ((len = getLength(tem, buffer->bcount)) != -1) {
     buffer->bcount -= len;
     buffer->bits = tem & mask[buffer->bcount];
@@ -123,12 +122,12 @@ int readBits (BitBuffer *buffer, FILE *fp )
   int result = 0x00;
   
   while ((len = getLength(tem, buffer->bcount)) == -1 && (result = fgetc(fp)) != EOF) {
-    if ( (result >> 7) == 0 && result != 0 && buffer->bcount == 0) {
+    if ( (result >> (BITS_MAX - 1)) == 0 && result != 0 && buffer->bcount == 0) {
       return -2;
     }
-    tem = (tem << 8) | result;
+    tem = (tem << BITS_MAX) | result;
 //     printf("%d--tem\n", tem);
-    buffer->bcount += 8;
+    buffer->bcount += BITS_MAX;
   }
   if (len == -1) {
     return -1;

@@ -55,11 +55,11 @@ void writeBits( int code, int nbits, BitBuffer *buffer, FILE *fp );
 void flushBits( BitBuffer *buffer, FILE *fp );
 
 
-/** Reads and returns the next valid code from the given file. Each valid code 
+/** Reads and returns the next valid code from the given file. Each valid code
     starts with a 1 and ends with two consecutive 0s (00).
     if no bits or only 0s have been read when the end of file is reached,
-    -1 is returned. 
-    If the first bit read is a 1 and the end of file is reached before 
+    -1 is returned.
+    If the first bit read is a 1 and the end of file is reached before
     two consecutive 0s (00) are read, -2 is returned.
     If the first bit read is a 0 and a 1 is read before the end of the file
     is reached, -2 is returned.

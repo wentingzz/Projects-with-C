@@ -4,17 +4,18 @@
 #include <stdlib.h>
 #include "codes.h"
 #include "bits.h"
+#define ARGC 3
 
 int main(int argc, char* argv[])
 {
-  if (argc != 3){
+  if (argc != ARGC){
     fprintf(stderr, "usage: encrypt <infile> <outfile>\n");
     return 1;
   }
   
   FILE * input = fopen(argv[1], "r");
   FILE * out = fopen(argv[2], "wb");
-  if(!input || !out){
+  if (!input || !out) {
     perror("file.txt: No such file or directory");
     fclose(input);
     fclose(out);
@@ -26,9 +27,9 @@ int main(int argc, char* argv[])
   BitBuffer * bb = malloc(sizeof(BitBuffer));
   bb->bits = 0x00;
   bb->bcount = 0;
-  while(1){
+  while (1) {
     ch = fgetc(input);
-    if(feof(input)){
+    if (feof(input)) {
       flushBits( bb, out );
       break;
     }
@@ -39,11 +40,8 @@ int main(int argc, char* argv[])
       fclose(out);
       return 1;
     }
-//     printf("%d %d: ", bb->bits, bb->bcount);
     writeBits(de, bitsInCode(ch), bb, out);
-//     printf("\nend: %d %d\n\n", bb->bits, bb->bcount);
   }
-  
   free(bb);
   fclose(input);
   fclose(out);
