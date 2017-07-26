@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
   if (!input){
     fprintf(stderr, "%s: No such file or directory\n", argv[1]);
     fclose(input);
-    fclose(out);
     return 1;
   }
   
