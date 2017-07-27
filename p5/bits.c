@@ -83,7 +83,7 @@ int getLength(int bin, int len)
   return length;
 }
 
-/** Reads and returns the next valid code from the given file. Each valid code 
+/** Reads and returns the next valid code from the given file. Each valid code
     starts with a 1 and ends with two consecutive 0s (00).
     if no bits or only 0s have been read when the end of file is reached,
     -1 is returned.
@@ -98,18 +98,6 @@ int getLength(int bin, int len)
     @param fp file bits are being read from, opened for reading in binary.
     @return value of the valid code read in, -1 if we reach the
     end-of-file under valid conditions, and -2 if the file is invalid.
-    .....001
-    10110101 8
-    100
-    
-    ....0011
-    01101011 9
-    00
-    
-    ...00110
-    11010110 10
-    0
-    
 */
 int readBits (BitBuffer *buffer, FILE *fp )
 {
