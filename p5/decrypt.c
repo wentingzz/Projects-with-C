@@ -10,10 +10,10 @@ int main(int argc, char *argv[])
     fprintf(stderr, "usage: decrypt <infile> <outfile>\n");
     return 1;
   }
+  
   FILE * input = fopen(argv[1], "rb");
   if (!input){
     fprintf(stderr, "%s: No such file or directory\n", argv[1]);
-    fclose(input);
     return 1;
   }
   
@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
   if (!out) {
     fprintf(stderr, "%s: No such file or directory\n", argv[2]);
     fclose(input);
-    fclose(out);
     return 1;
   }
   
