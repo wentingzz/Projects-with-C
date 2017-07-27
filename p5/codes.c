@@ -38,14 +38,16 @@ int symToCode( unsigned char ch )
  */
 int bitsInCode( unsigned char ch )
 {
-  if (ch == ' ' || ch == '\n'){
-    return 11;
-  } else if (ch >= 'A' && ch <= 'Z') {
-    int table[LETTERS_COUNT] = {6, 10, 11, 8, 3, 10, 9, 9, 5, 12, 9, 10, 7, 6, 10, 11, 12,
-    8, 7, 4, 8, 10, 9, 11, 12, 11};
-    return table[ch - 'A'];
+  int binary = symToCode(ch);
+  if (binary == -1) {
+    return -1;
   }
-  return -1;
+  int length = 0;
+  while (binary != 0) {
+    binary = binary >> 1;
+    length++;
+  }
+  return length;
 }
 
 /**
