@@ -1,4 +1,3 @@
-/** Helpful program to report the value in every byte of stdin, in binary. */
 #include <stdio.h>
 #include <stdlib.h>
 #include "codes.h"
@@ -41,9 +40,6 @@ int main(int argc, char *argv[])
     }
     
     fprintf(out, "%c", (char)codeToSym(next));
-//     printf("%d %d: ", bb->bits, bb->bcount);
-//     printf("end: %d\n", next);
-//     printf("\nend: %d %d\n\n", bb->bits, bb->bcount);
   }
   free(bb);
   fclose(input);

@@ -68,6 +68,9 @@ void flushBits( BitBuffer *buffer, FILE *fp )
 
 int getLength(int bin, int len)
 {
+  if (len == 1) {
+    return -1;
+  }
   int length = -1;
 //   int tem = bin;
   while (len){
@@ -95,12 +98,25 @@ int getLength(int bin, int len)
     @param fp file bits are being read from, opened for reading in binary.
     @return value of the valid code read in, -1 if we reach the
     end-of-file under valid conditions, and -2 if the file is invalid.
+    .....001
+    10110101 8
+    100
+    
+    ....0011
+    01101011 9
+    00
+    
+    ...00110
+    11010110 10
+    0
+    
 */
 int readBits (BitBuffer *buffer, FILE *fp )
 {
   if (buffer->bcount > 1 && buffer->bits == 0) {
     return -1;
   }
+  
   int len;
   int tem = buffer->bits;
   int mask[MAS_LENGTH] = {0x00, 0x01, 0x03, 0x07, 0x0F, 0x1F, 0x3F, 0x7F, 0xFF, 0x1FF, 
@@ -111,7 +127,7 @@ int readBits (BitBuffer *buffer, FILE *fp )
     buffer->bits = tem & mask[buffer->bcount];
     return tem >> buffer->bcount;
   }
-//   printf("\n%d\n", feof(fp));
+
   if (feof(fp)) {
     if (buffer->bits != 0) {
       return -2;
@@ -126,7 +142,6 @@ int readBits (BitBuffer *buffer, FILE *fp )
       return -2;
     }
     tem = (tem << BITS_MAX) | result;
-//     printf("%d--tem\n", tem);
     buffer->bcount += BITS_MAX;
   }
   if (len == -1) {
@@ -135,7 +150,5 @@ int readBits (BitBuffer *buffer, FILE *fp )
   buffer->bcount -= len;
   result = tem >> buffer->bcount;
   buffer->bits = tem & mask[buffer->bcount];
-//   printf("%d--res\n", result);
-//   printf("%d--bc\n", buffer->bcount);
   return result;
 }
